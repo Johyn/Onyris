@@ -1,0 +1,507 @@
+[gd_scene load_steps=13 format=2]
+
+[ext_resource path="res://Script/Soulcolli.gd" type="Script" id=1]
+[ext_resource path="res://Textures/Backgrounds/Mindback.png" type="Texture" id=2]
+[ext_resource path="res://Textures/Icons/soulpoint.png" type="Texture" id=3]
+[ext_resource path="res://Textures/Font/Mind.tres" type="DynamicFont" id=4]
+[ext_resource path="res://Textures/Font/Soul.tres" type="DynamicFont" id=5]
+[ext_resource path="res://Sounds/MindBodysound.ogg" type="AudioStream" id=6]
+[ext_resource path="res://Textures/Icons/bodypoint.png" type="Texture" id=7]
+[ext_resource path="res://Textures/Font/Body.tres" type="DynamicFont" id=8]
+[ext_resource path="res://Script/MindtoBody.gd" type="Script" id=9]
+
+[sub_resource type="Animation" id=1]
+
+resource_name = "change"
+length = 5.0
+loop = false
+step = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("../../Background:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 0.820313, 0.499878, 0.499878, 1 ), Color( 0.0273438, 0.000747681, 0.000747681, 1 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("../../soul:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 0.863281, 0.775604, 0.775604, 1 ), Color( 0.046875, 0.00183105, 0.00183105, 1 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("../../AudioStreamPlayer2D/bodypoint:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 0.902344, 0.821274, 0.821274, 1 ), Color( 0.0273438, 0.00202942, 0.00202942, 1 ) ]
+}
+
+[sub_resource type="Animation" id=2]
+
+length = 5.0
+loop = false
+step = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("Background:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 0.0273438, 0.000747681, 0.000747681, 1 ), Color( 0.820313, 0.499878, 0.499878, 1 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("soul:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 0.046875, 0.00183105, 0.00183105, 1 ), Color( 1, 1, 1, 1 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("AudioStreamPlayer2D/bodypoint:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 0.0273438, 0.00202942, 0.00202942, 1 ), Color( 1, 1, 1, 1 ) ]
+}
+
+[sub_resource type="Animation" id=3]
+
+resource_name = "change1"
+length = 5.0
+loop = false
+step = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("../../Background:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 0.820313, 0.499878, 0.499878, 1 ), Color( 0.0664063, 0.00337219, 0.00337219, 1 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("../../soul:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 0.863281, 0.775604, 0.775604, 1 ), Color( 0.0703125, 0.00466919, 0.00466919, 1 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("../../AudioStreamPlayer2D/bodypoint:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 0.902344, 0.821274, 0.821274, 1 ), Color( 0.0742188, 0.00666809, 0.00666809, 1 ) ]
+}
+
+[node name="Node2D" type="Node2D" index="0"]
+
+[node name="Area2D" type="Area2D" parent="." index="0"]
+
+input_pickable = true
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+audio_bus_override = false
+audio_bus_name = "Master"
+
+[node name="MindtoSoul" type="CollisionPolygon2D" parent="Area2D" index="0"]
+
+build_mode = 0
+polygon = PoolVector2Array( 946.666, 529.241, 953.964, 525.924, 963.915, 523.934, 971.876, 528.578, 979.174, 535.212, 981.164, 543.837, 977.847, 554.452, 970.549, 560.422, 961.925, 562.413, 952.637, 560.422, 944.676, 555.115, 941.359, 546.49, 941.359, 535.876 )
+script = ExtResource( 1 )
+
+[node name="AnimationPlayer1" type="AnimationPlayer" parent="Area2D/MindtoSoul" index="0"]
+
+root_node = NodePath("..")
+autoplay = ""
+playback_process_mode = 1
+playback_default_blend_time = 0.0
+playback_speed = 1.0
+anims/change = SubResource( 1 )
+blend_times = [  ]
+
+[node name="Background" type="Sprite" parent="." index="1"]
+
+modulate = Color( 0.0664063, 0.00337219, 0.00337219, 1 )
+position = Vector2( 961.193, 539.44 )
+scale = Vector2( 1.00083, 1.00038 )
+texture = ExtResource( 2 )
+_sections_unfolded = [ "Visibility" ]
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="soul" type="Sprite" parent="." index="2"]
+
+modulate = Color( 0.0703125, 0.00466919, 0.00466919, 1 )
+position = Vector2( 960.504, 544.185 )
+scale = Vector2( 0.133475, 0.13932 )
+texture = ExtResource( 3 )
+_sections_unfolded = [ "Visibility" ]
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." index="3"]
+
+root_node = NodePath("..")
+autoplay = "Open"
+playback_process_mode = 1
+playback_default_blend_time = 0.0
+playback_speed = 1.0
+anims/Open = SubResource( 2 )
+blend_times = [  ]
+
+[node name="Int" type="Label" parent="." index="4"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 1144.0
+margin_top = 367.0
+margin_right = 1608.0
+margin_bottom = 510.0
+rect_scale = Vector2( 0.3, 0.3 )
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+custom_fonts/font = ExtResource( 4 )
+text = "Intelligence"
+align = 1
+valign = 1
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+_sections_unfolded = [ "Rect", "custom_fonts" ]
+
+[node name="Intu" type="Label" parent="." index="5"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 664.0
+margin_top = 364.0
+margin_right = 976.0
+margin_bottom = 507.0
+rect_scale = Vector2( 0.3, 0.3 )
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+custom_fonts/font = ExtResource( 4 )
+text = "Intuition"
+align = 1
+valign = 1
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+_sections_unfolded = [ "Rect", "custom_fonts" ]
+
+[node name="Will" type="Label" parent="." index="6"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 935.0
+margin_top = 112.0
+margin_right = 1099.0
+margin_bottom = 255.0
+rect_scale = Vector2( 0.3, 0.3 )
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+custom_fonts/font = ExtResource( 4 )
+text = "Will"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+_sections_unfolded = [ "Rect", "custom_fonts" ]
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Cha" type="Label" parent="." index="7"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 911.0
+margin_top = 613.0
+margin_right = 1254.0
+margin_bottom = 756.0
+rect_scale = Vector2( 0.3, 0.3 )
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+custom_fonts/font = ExtResource( 4 )
+text = "Charism"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+_sections_unfolded = [ "Rect", "custom_fonts" ]
+
+[node name="Mental health" type="Label" parent="." index="8"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 622.0
+margin_top = 634.0
+margin_right = 1177.0
+margin_bottom = 777.0
+rect_scale = Vector2( 0.2, 0.2 )
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+custom_fonts/font = ExtResource( 4 )
+text = "Mental health"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+_sections_unfolded = [ "Rect", "custom_fonts" ]
+
+[node name="Mental power" type="Label" parent="." index="9"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 1164.0
+margin_top = 621.0
+margin_right = 2035.0
+margin_bottom = 892.0
+rect_scale = Vector2( 0.2, 0.2 )
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+custom_fonts/font = ExtResource( 4 )
+text = "Mental power"
+align = 1
+valign = 1
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+_sections_unfolded = [ "Rect", "custom_fonts" ]
+
+[node name="Soul" type="Label" parent="." index="10"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 905.0
+margin_top = 496.0
+margin_right = 1085.0
+margin_bottom = 639.0
+rect_scale = Vector2( 0.6, 0.6 )
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+custom_fonts/font = ExtResource( 5 )
+text = "Soul"
+align = 1
+valign = 1
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+_sections_unfolded = [ "Rect", "custom_fonts" ]
+
+[node name="Mind" type="Label" parent="." index="11"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 905.0
+margin_top = 263.0
+margin_right = 1107.0
+margin_bottom = 406.0
+rect_scale = Vector2( 0.6, 0.6 )
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+custom_fonts/font = ExtResource( 4 )
+text = "Mind"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+_sections_unfolded = [ "Rect", "custom_fonts" ]
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." index="12"]
+
+stream = ExtResource( 6 )
+volume_db = 0.0
+autoplay = true
+max_distance = 2000.0
+attenuation = 1.0
+bus = "Master"
+area_mask = 1
+
+[node name="bodypoint" type="Sprite" parent="AudioStreamPlayer2D" index="0"]
+
+modulate = Color( 0.0742188, 0.00666809, 0.00666809, 1 )
+position = Vector2( 960.953, 737.919 )
+scale = Vector2( 0.132063, 0.13932 )
+texture = ExtResource( 7 )
+_sections_unfolded = [ "Visibility" ]
+
+[node name="Body" type="Label" parent="." index="13"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 945.0
+margin_top = 728.0
+margin_right = 1005.0
+margin_bottom = 807.0
+rect_scale = Vector2( 0.2, 0.2 )
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+custom_fonts/font = ExtResource( 8 )
+text = "B"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+_sections_unfolded = [ "Rect", "custom_fonts" ]
+
+[node name="ody" type="Label" parent="Body" index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 64.0
+margin_top = 25.0
+margin_right = 240.0
+margin_bottom = 260.0
+rect_scale = Vector2( 0.6, 0.6 )
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+custom_fonts/font = ExtResource( 8 )
+text = "ody"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+_sections_unfolded = [ "Rect", "custom_fonts" ]
+
+[node name="Area2D2" type="Area2D" parent="." index="14"]
+
+input_pickable = true
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+audio_bus_override = false
+audio_bus_name = "Master"
+
+[node name="MindtoBody" type="CollisionPolygon2D" parent="Area2D2" index="0"]
+
+build_mode = 0
+polygon = PoolVector2Array( 963.641, 718.933, 973.197, 723.343, 979.813, 731.429, 979.078, 739.515, 977.607, 746.866, 971.727, 752.012, 964.376, 754.952, 954.084, 754.952, 947.468, 749.807, 941.588, 739.515, 945.998, 729.224, 951.879, 721.138 )
+script = ExtResource( 9 )
+
+[node name="AnimationPlayer2" type="AnimationPlayer" parent="Area2D2/MindtoBody" index="0"]
+
+root_node = NodePath("..")
+autoplay = ""
+playback_process_mode = 1
+playback_default_blend_time = 0.0
+playback_speed = 1.0
+anims/change1 = SubResource( 3 )
+blend_times = [  ]
+
+[connection signal="input_event" from="Area2D" to="Area2D/MindtoSoul" method="_on_Area2D_input_event"]
+
+[connection signal="animation_finished" from="Area2D/MindtoSoul/AnimationPlayer1" to="Area2D/MindtoSoul" method="_on_AnimationPlayer1_animation_finished"]
+
+[connection signal="input_event" from="Area2D2" to="Area2D2/MindtoBody" method="_on_Area2D2_input_event"]
+
+[connection signal="animation_finished" from="Area2D2/MindtoBody/AnimationPlayer2" to="Area2D2/MindtoBody" method="_on_AnimationPlayer2_animation_finished"]
+
+

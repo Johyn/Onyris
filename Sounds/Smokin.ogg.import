@@ -1,0 +1,18 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/Smokin.ogg-0b866865c3f5da969e4ea0164890b3aa.oggstr"
+
+[deps]
+
+source_file="res://Sounds/Smokin.ogg"
+source_md5="1fbb28f8c0f0a5a8631e193408e1a639"
+
+dest_files=[ "res://.import/Smokin.ogg-0b866865c3f5da969e4ea0164890b3aa.oggstr" ]
+dest_md5="540499dcc5d55e313d9c7d897d598460"
+
+[params]
+
+loop=true
+loop_offset=0

@@ -1,0 +1,82 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://Script/WorldtoLimbo.gd" type="Script" id=1]
+[ext_resource path="res://Textures/Backgrounds/Pilar.png" type="Texture" id=2]
+
+
+[sub_resource type="Animation" id=1]
+
+resource_name = "Intro"
+length = 5.0
+loop = false
+step = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("Pilar:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 0.0546875, 0.00256348, 0.00256348, 1 ), Color( 0.871094, 0.707764, 0.707764, 1 ) ]
+}
+
+[sub_resource type="Animation" id=2]
+
+resource_name = "change"
+length = 5.0
+loop = false
+step = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("Pilar:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 0.871094, 0.707764, 0.707764, 1 ), Color( 0.0546875, 0.00299072, 0.00299072, 1 ) ]
+}
+
+[node name="Node2D" type="Node2D"]
+
+script = ExtResource( 1 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." index="0"]
+
+root_node = NodePath("..")
+autoplay = "Intro"
+playback_process_mode = 1
+playback_default_blend_time = 0.0
+playback_speed = 1.0
+anims/Intro = SubResource( 1 )
+blend_times = [  ]
+
+[node name="AnimationPlayer2" type="AnimationPlayer" parent="." index="1"]
+
+root_node = NodePath("..")
+autoplay = ""
+playback_process_mode = 1
+playback_default_blend_time = 0.0
+playback_speed = 1.0
+anims/change = SubResource( 2 )
+blend_times = [  ]
+
+[node name="Pilar" type="Sprite" parent="." index="2"]
+
+modulate = Color( 0.871094, 0.707764, 0.707764, 1 )
+position = Vector2( 953.094, 539.92 )
+scale = Vector2( 1.01418, 1.00903 )
+texture = ExtResource( 2 )
+_sections_unfolded = [ "Visibility" ]
+__meta__ = {
+"_edit_lock_": true
+}
+
+[connection signal="animation_finished" from="AnimationPlayer2" to="." method="_on_AnimationPlayer2_animation_finished"]
+
+

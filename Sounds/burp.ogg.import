@@ -1,0 +1,18 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/burp.ogg-a0808bfcae2c7a209695632e7892fda5.oggstr"
+
+[deps]
+
+source_file="res://Sounds/burp.ogg"
+source_md5="ebb41de9abc2b87f1ed1504f5be34f6a"
+
+dest_files=[ "res://.import/burp.ogg-a0808bfcae2c7a209695632e7892fda5.oggstr" ]
+dest_md5="862e22fcac663f40cf1ed1fc0b91767c"
+
+[params]
+
+loop=true
+loop_offset=0

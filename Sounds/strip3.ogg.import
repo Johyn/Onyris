@@ -1,0 +1,18 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/strip3.ogg-9a90d450682e02389a84ac97991a682a.oggstr"
+
+[deps]
+
+source_file="res://Sounds/strip3.ogg"
+source_md5="a5e6eb5ee08e802374195cc8191fd50e"
+
+dest_files=[ "res://.import/strip3.ogg-9a90d450682e02389a84ac97991a682a.oggstr" ]
+dest_md5="eff92b3b80346cb4f5cde4d1cf7a0e6c"
+
+[params]
+
+loop=true
+loop_offset=0

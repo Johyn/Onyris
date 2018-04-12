@@ -1,0 +1,18 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/Villageplace.ogg-86350e6288ef137b64147ca79a3a4153.oggstr"
+
+[deps]
+
+source_file="res://Sounds/Villageplace.ogg"
+source_md5="51d3325958c4c203dfd43a27d2bcceaa"
+
+dest_files=[ "res://.import/Villageplace.ogg-86350e6288ef137b64147ca79a3a4153.oggstr" ]
+dest_md5="411300bad77f7808109fab0612d7ffdd"
+
+[params]
+
+loop=true
+loop_offset=0

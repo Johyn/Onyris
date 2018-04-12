@@ -1,0 +1,18 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/Dancer.ogg-a55bdf872c49b06de507f943f72f75fc.oggstr"
+
+[deps]
+
+source_file="res://Sounds/Dancer.ogg"
+source_md5="51b7a94713b8ced1c85927fef5fc61a4"
+
+dest_files=[ "res://.import/Dancer.ogg-a55bdf872c49b06de507f943f72f75fc.oggstr" ]
+dest_md5="b76ade3b56142f4658e238c7022260ce"
+
+[params]
+
+loop=true
+loop_offset=0

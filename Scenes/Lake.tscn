@@ -1,0 +1,13 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://Textures/Backgrounds/lake.png" type="Texture" id=1]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Lake" type="Sprite" parent="." index="0"]
+
+position = Vector2( 959.583, 544.632 )
+scale = Vector2( 2.42205, 2.85541 )
+texture = ExtResource( 1 )
+
+

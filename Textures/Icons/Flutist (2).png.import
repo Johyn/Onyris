@@ -1,0 +1,32 @@
+[remap]
+
+importer="texture"
+type="StreamTexture"
+path="res://.import/Flutist (2).png-f64058262f3c47e2e7598fb5af0b1f37.stex"
+
+[deps]
+
+source_file="res://Textures/Icons/Flutist (2).png"
+source_md5="b19b1fe7fbe6373ac22c9a1f504e29fd"
+
+dest_files=[ "res://.import/Flutist (2).png-f64058262f3c47e2e7598fb5af0b1f37.stex" ]
+dest_md5="e0d93e4fe2626bd145012982c51bb3e1"
+
+[params]
+
+compress/mode=0
+compress/lossy_quality=0.7
+compress/hdr_mode=0
+compress/normal_map=0
+flags/repeat=0
+flags/filter=true
+flags/mipmaps=false
+flags/anisotropic=false
+flags/srgb=2
+process/fix_alpha_border=true
+process/premult_alpha=false
+process/HDR_as_SRGB=false
+stream=false
+size_limit=0
+detect_3d=true
+svg/scale=1.0

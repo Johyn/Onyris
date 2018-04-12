@@ -1,0 +1,18 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/jungle.ogg-ee59652198bc5f02821ab7462b475ef0.oggstr"
+
+[deps]
+
+source_file="res://Sounds/jungle.ogg"
+source_md5="9c940863442dbbb7a37204068496a02b"
+
+dest_files=[ "res://.import/jungle.ogg-ee59652198bc5f02821ab7462b475ef0.oggstr" ]
+dest_md5="4a5e8df2429ea2be5bbaf97a112aa301"
+
+[params]
+
+loop=true
+loop_offset=0

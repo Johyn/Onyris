@@ -1,0 +1,138 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://Sounds/wardersteps.ogg" type="AudioStream" id=1]
+[ext_resource path="res://Textures/Backgrounds/watchtower1.png" type="Texture" id=2]
+[ext_resource path="res://Textures/Portaits/warder.png" type="Texture" id=3]
+[ext_resource path="res://Sounds/watchtower.ogg" type="AudioStream" id=4]
+[ext_resource path="res://Textures/Font/warder.tres" type="DynamicFont" id=5]
+
+
+
+
+[sub_resource type="Animation" id=1]
+
+resource_name = "warder"
+length = 20.0
+loop = false
+step = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("warder:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 6 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ false, true ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Label:text")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 8 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ "Ho." ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("Label:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 8 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ false, true ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("AudioStreamPlayer2D2:playing")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0, 6 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ true, false ]
+}
+
+[node name="Node2D" type="Node2D" index="0"]
+
+[node name="AudioStreamPlayer2D2" type="AudioStreamPlayer2D" parent="." index="0"]
+
+stream = ExtResource( 1 )
+volume_db = 0.0
+autoplay = false
+max_distance = 2000.0
+attenuation = 1.0
+bus = "Master"
+area_mask = 1
+
+[node name="Background" type="Sprite" parent="." index="1"]
+
+position = Vector2( 959.025, 547.305 )
+scale = Vector2( 1.0001, 1.01084 )
+texture = ExtResource( 2 )
+
+[node name="warder" type="Sprite" parent="." index="2"]
+
+position = Vector2( 433.493, 789.203 )
+texture = ExtResource( 3 )
+_sections_unfolded = [ "Visibility" ]
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." index="3"]
+
+root_node = NodePath("..")
+autoplay = "warder"
+playback_process_mode = 1
+playback_default_blend_time = 0.0
+playback_speed = 1.0
+anims/warder = SubResource( 1 )
+blend_times = [  ]
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." index="4"]
+
+stream = ExtResource( 4 )
+volume_db = 0.0
+autoplay = true
+max_distance = 2000.0
+attenuation = 1.0
+bus = "Master"
+area_mask = 1
+
+[node name="Label" type="Label" parent="." index="5"]
+
+modulate = Color( 0.527344, 0.400271, 0.236893, 1 )
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 97.0
+margin_top = 55.0
+margin_right = 181.0
+margin_bottom = 135.0
+rect_scale = Vector2( 2, 2 )
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+custom_fonts/font = ExtResource( 5 )
+text = "Ho, Sy...
+"
+align = 1
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+_sections_unfolded = [ "Rect", "Visibility", "custom_fonts" ]
+
+

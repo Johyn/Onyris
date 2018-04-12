@@ -1,0 +1,18 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/birdsfield.ogg-64b7d30bdd455577766cd6567bdacd84.oggstr"
+
+[deps]
+
+source_file="res://Sounds/birdsfield.ogg"
+source_md5="f996cb4826186d96b760f7c7a8139f1e"
+
+dest_files=[ "res://.import/birdsfield.ogg-64b7d30bdd455577766cd6567bdacd84.oggstr" ]
+dest_md5="522d218ea5bac2e25c2fc3e0d62a0a81"
+
+[params]
+
+loop=true
+loop_offset=0

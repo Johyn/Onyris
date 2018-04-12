@@ -1,0 +1,17 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://Textures/Backgrounds/sourcetree.jpg" type="Texture" id=1]
+
+
+[node name="Node2D" type="Node2D" index="0"]
+
+[node name="Background" type="Sprite" parent="." index="0"]
+
+position = Vector2( 962.688, 541.18 )
+scale = Vector2( 3.0136, 3.00501 )
+texture = ExtResource( 1 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+

@@ -1,0 +1,18 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/vilnor.ogg-06d10cff87a79972a6bcb070b497181d.oggstr"
+
+[deps]
+
+source_file="res://Sounds/vilnor.ogg"
+source_md5="e34d035e0450088f1405a4fdc83c55c4"
+
+dest_files=[ "res://.import/vilnor.ogg-06d10cff87a79972a6bcb070b497181d.oggstr" ]
+dest_md5="8585e9d482f79245f8802eecb5456c34"
+
+[params]
+
+loop=true
+loop_offset=0

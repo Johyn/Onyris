@@ -1,0 +1,18 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/loveroom.ogg-3c4139d2a8276045a2d130cfe5e8991a.oggstr"
+
+[deps]
+
+source_file="res://Sounds/loveroom.ogg"
+source_md5="fcd19bd84e23c9a7d516b7b398d970fc"
+
+dest_files=[ "res://.import/loveroom.ogg-3c4139d2a8276045a2d130cfe5e8991a.oggstr" ]
+dest_md5="1c51690e38a72f18c3caea8deac043bc"
+
+[params]
+
+loop=true
+loop_offset=0

@@ -1,0 +1,18 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/Village.ogg-d3274ecc5f3a0e65e488668dec0ee377.oggstr"
+
+[deps]
+
+source_file="res://Sounds/Village.ogg"
+source_md5="e55147f107839f761cf3839953c61237"
+
+dest_files=[ "res://.import/Village.ogg-d3274ecc5f3a0e65e488668dec0ee377.oggstr" ]
+dest_md5="91e2ce83d282281e7f56ca61ba3c9cda"
+
+[params]
+
+loop=true
+loop_offset=0

@@ -1,0 +1,18 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/Ado.ogg-f29c047e84c617e1dfee6d9f387a908d.oggstr"
+
+[deps]
+
+source_file="res://Sounds/Ado.ogg"
+source_md5="98cbcc5654bdb8b57d752f4715c4c37b"
+
+dest_files=[ "res://.import/Ado.ogg-f29c047e84c617e1dfee6d9f387a908d.oggstr" ]
+dest_md5="a910b7dccf4452f2e7a2a0ff3cba4402"
+
+[params]
+
+loop=true
+loop_offset=0

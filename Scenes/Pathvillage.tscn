@@ -1,0 +1,319 @@
+[gd_scene load_steps=15 format=2]
+
+[ext_resource path="res://Script/Pathvillage.gd" type="Script" id=1]
+[ext_resource path="res://Textures/Backgrounds/Pathvillage1.png" type="Texture" id=2]
+[ext_resource path="res://Textures/Portaits/nymphe4.png" type="Texture" id=3]
+[ext_resource path="res://Textures/Fleurs/fleur1.png" type="Texture" id=4]
+[ext_resource path="res://Script/chatnympheD.gd" type="Script" id=5]
+[ext_resource path="res://Textures/Font/Soul.tres" type="DynamicFont" id=6]
+[ext_resource path="res://Sounds/Village1.ogg" type="AudioStream" id=7]
+[ext_resource path="res://Script/Pathtovillage.gd" type="Script" id=8]
+[ext_resource path="res://Script/Pathtoplace.gd" type="Script" id=9]
+
+[sub_resource type="Animation" id=1]
+
+resource_name = "Intro"
+length = 5.0
+loop = false
+step = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("Background:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 1 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Background/nymphe:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 0.00389099, 0.0585938, 0.0329519, 1 ), Color( 0.560547, 0.875, 0.7276, 1 ) ]
+}
+
+[sub_resource type="Animation" id=2]
+
+resource_name = "chat"
+length = 3.0
+loop = false
+step = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("Nymphe:text")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 3 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ "Hi...", "Hi..." ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Nymphe:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 3 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 0.797653, 0.9375, 0.74707, 1 ), Color( 0.0208955, 0.0703125, 0.00302124, 1 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("Nymphe:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 3 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ true, false ]
+}
+
+[sub_resource type="RectangleShape2D" id=3]
+
+custom_solver_bias = 0.0
+extents = Vector2( 3.25484, 10 )
+
+[sub_resource type="Animation" id=4]
+
+resource_name = "back"
+length = 5.0
+loop = false
+step = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("../../Background:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 0.00579834, 0.0742188, 0.0309213, 1 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("../../Background/nymphe:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 0.714214, 0.832031, 0.572021, 1 ), Color( 0.00672913, 0.0820313, 0.0467334, 1 ) ]
+}
+
+[sub_resource type="Animation" id=5]
+
+resource_name = "change"
+length = 5.0
+loop = false
+step = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("../../Background:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 0.00491333, 0.0546875, 0.0231897, 1 ) ]
+}
+
+[node name="Node2D" type="Node2D"]
+
+script = ExtResource( 1 )
+
+[node name="Background" type="Sprite" parent="." index="0"]
+
+position = Vector2( 960, 535.495 )
+scale = Vector2( 2.28235, 1.81228 )
+texture = ExtResource( 2 )
+_sections_unfolded = [ "Offset", "Visibility" ]
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="nymphe" type="Sprite" parent="Background" index="0"]
+
+modulate = Color( 0.714214, 0.832031, 0.572021, 1 )
+position = Vector2( -170.876, 77.9495 )
+scale = Vector2( 0.520296, 0.717446 )
+texture = ExtResource( 3 )
+_sections_unfolded = [ "Visibility" ]
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="fleur1" type="Sprite" parent="Background/nymphe" index="0"]
+
+position = Vector2( 97.4683, -269.88 )
+texture = ExtResource( 4 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." index="1"]
+
+root_node = NodePath("..")
+autoplay = "Intro"
+playback_process_mode = 1
+playback_default_blend_time = 0.0
+playback_speed = 1.0
+anims/Intro = SubResource( 1 )
+blend_times = [  ]
+
+[node name="Area2D" type="Area2D" parent="." index="2"]
+
+input_pickable = true
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+audio_bus_override = false
+audio_bus_name = "Master"
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Area2D" index="0"]
+
+build_mode = 0
+polygon = PoolVector2Array( 520, 1020, 500, 880, 540, 760, 580, 690, 570, 600, 550, 540, 430, 450, 420, 420, 440, 400, 480, 410, 540, 350, 580, 350, 640, 390, 650, 420, 670, 430, 730, 480, 770, 490, 780, 610, 780, 640, 770, 660, 750, 660, 740, 650, 720, 740, 730, 810, 730, 890, 730, 990, 730, 1020 )
+script = ExtResource( 5 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="AnimationPlayer1" type="AnimationPlayer" parent="Area2D/CollisionPolygon2D" index="0"]
+
+root_node = NodePath("..")
+autoplay = ""
+playback_process_mode = 1
+playback_default_blend_time = 0.0
+playback_speed = 1.0
+anims/chat = SubResource( 2 )
+blend_times = [  ]
+
+[node name="Nymphe" type="Label" parent="Area2D/CollisionPolygon2D" index="1"]
+
+visible = false
+modulate = Color( 0.0208955, 0.0703125, 0.00302124, 1 )
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 400.0
+margin_top = 250.0
+margin_right = 486.0
+margin_bottom = 330.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+custom_fonts/font = ExtResource( 6 )
+text = "Hi..."
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+_sections_unfolded = [ "Visibility", "custom_fonts" ]
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." index="3"]
+
+stream = ExtResource( 7 )
+volume_db = 0.0
+autoplay = true
+max_distance = 2000.0
+attenuation = 1.0
+bus = "Master"
+area_mask = 1
+
+[node name="Area2D2" type="Area2D" parent="." index="4"]
+
+input_pickable = true
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+audio_bus_override = false
+audio_bus_name = "Master"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D2" index="0"]
+
+position = Vector2( 535, 1050 )
+scale = Vector2( 98.3238, 2.30769 )
+shape = SubResource( 3 )
+script = ExtResource( 8 )
+_sections_unfolded = [ "Visibility" ]
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="AnimationPlayer2" type="AnimationPlayer" parent="Area2D2/CollisionShape2D" index="0"]
+
+root_node = NodePath("..")
+autoplay = ""
+playback_process_mode = 1
+playback_default_blend_time = 0.0
+playback_speed = 1.0
+anims/back = SubResource( 4 )
+blend_times = [  ]
+
+[node name="Area2D3" type="Area2D" parent="." index="5"]
+
+input_pickable = true
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+audio_bus_override = false
+audio_bus_name = "Master"
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Area2D3" index="0"]
+
+build_mode = 0
+polygon = PoolVector2Array( 270, 1000, 580, 690, 540, 760, 500, 880, 510, 1020, 250, 1020 )
+script = ExtResource( 9 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="AnimationPlayer2" type="AnimationPlayer" parent="Area2D3/CollisionPolygon2D" index="0"]
+
+root_node = NodePath("..")
+autoplay = ""
+playback_process_mode = 1
+playback_default_blend_time = 0.0
+playback_speed = 1.0
+anims/change = SubResource( 5 )
+blend_times = [  ]
+
+[connection signal="input_event" from="Area2D" to="Area2D/CollisionPolygon2D" method="_on_Area2D_input_event"]
+
+[connection signal="input_event" from="Area2D2" to="Area2D2/CollisionShape2D" method="_on_Area2D2_input_event"]
+
+[connection signal="animation_finished" from="Area2D2/CollisionShape2D/AnimationPlayer2" to="Area2D2/CollisionShape2D" method="_on_AnimationPlayer_animation_finished"]
+
+[connection signal="input_event" from="Area2D3" to="Area2D3/CollisionPolygon2D" method="_on_Area2D3_input_event"]
+
+[connection signal="animation_finished" from="Area2D3/CollisionPolygon2D/AnimationPlayer2" to="Area2D3/CollisionPolygon2D" method="_on_AnimationPlayer2_animation_finished"]
+
+
