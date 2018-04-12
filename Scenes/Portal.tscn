@@ -1,0 +1,155 @@
+[gd_scene load_steps=10 format=2]
+
+[ext_resource path="res://Textures/Backgrounds/jungle.jpg" type="Texture" id=1]
+[ext_resource path="res://Textures/Icons/portal.png" type="Texture" id=2]
+[ext_resource path="res://Textures/Fleurs/branch.png" type="Texture" id=3]
+[ext_resource path="res://Textures/Fleurs/plant.png" type="Texture" id=4]
+[ext_resource path="res://Sounds/jungle.ogg" type="AudioStream" id=5]
+[ext_resource path="res://Script/quit.gd" type="Script" id=6]
+[ext_resource path="res://Textures/Font/Soul.tres" type="DynamicFont" id=7]
+[ext_resource path="res://Script/quitanim.gd" type="Script" id=8]
+
+
+[sub_resource type="Animation" id=1]
+
+resource_name = "quit"
+length = 3.0
+loop = false
+step = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("Label:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 3 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ true, false ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("../../Area2D2:input_pickable")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 3 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ true, false ]
+}
+
+[node name="Node2D" type="Node2D"]
+
+[node name="jungle" type="Sprite" parent="." index="0"]
+
+position = Vector2( 959.491, 538.695 )
+scale = Vector2( 3.00436, 3.02268 )
+texture = ExtResource( 1 )
+
+[node name="portal" type="Sprite" parent="." index="1"]
+
+position = Vector2( 971.259, 566.674 )
+scale = Vector2( 3.05339, 2.91633 )
+texture = ExtResource( 2 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="branch" type="Sprite" parent="." index="2"]
+
+position = Vector2( 947.236, 29.6324 )
+texture = ExtResource( 3 )
+_sections_unfolded = [ "Offset" ]
+
+[node name="plant" type="Sprite" parent="." index="3"]
+
+modulate = Color( 0.614489, 0.746094, 0.547913, 1 )
+position = Vector2( 1377.96, 1025 )
+texture = ExtResource( 4 )
+_sections_unfolded = [ "Visibility" ]
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." index="4"]
+
+stream = ExtResource( 5 )
+volume_db = 0.0
+autoplay = true
+mix_target = 0
+bus = "Master"
+
+[node name="Area2D" type="Area2D" parent="." index="5"]
+
+input_pickable = true
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+audio_bus_override = false
+audio_bus_name = "Master"
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Area2D" index="0"]
+
+build_mode = 0
+polygon = PoolVector2Array( 708, 1026.1, 718.021, 451.557, 758.106, 316.272, 823.243, 216.061, 905.082, 150.923, 965.209, 130.881, 1033.69, 159.274, 1097.15, 219.401, 1150.6, 294.559, 1192.35, 414.813, 1214.07, 521.705, 1215.74, 735.488, 1225.76, 915.868, 1230.77, 1026.1 )
+script = ExtResource( 6 )
+
+[node name="Label" type="Label" parent="Area2D/CollisionPolygon2D" index="0"]
+
+visible = false
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 728.0
+margin_top = 386.0
+margin_right = 1180.0
+margin_bottom = 544.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+custom_fonts/font = ExtResource( 7 )
+text = "Back to earth?"
+align = 1
+valign = 1
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+_sections_unfolded = [ "Visibility", "custom_fonts" ]
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Area2D/CollisionPolygon2D" index="1"]
+
+root_node = NodePath("..")
+autoplay = ""
+playback_process_mode = 1
+playback_default_blend_time = 0.0
+playback_speed = 1.0
+anims/quit = SubResource( 1 )
+blend_times = [  ]
+script = ExtResource( 8 )
+
+[node name="Area2D2" type="Area2D" parent="." index="6"]
+
+input_pickable = false
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+audio_bus_override = false
+audio_bus_name = "Master"
+_sections_unfolded = [ "Collision", "Pickable", "Transform", "Z Index" ]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Area2D2" index="0"]
+
+build_mode = 0
+polygon = PoolVector2Array( 704.828, 1009.54, 713.917, 443.792, 754.814, 314.284, 811.616, 223.401, 884.322, 162.055, 966.117, 130.246, 1047.91, 166.599, 1129.71, 259.754, 1172.88, 357.454, 1209.23, 507.411, 1213.77, 602.838, 1229.68, 1020.9 )
+
+[connection signal="input_event" from="Area2D" to="Area2D/CollisionPolygon2D" method="_on_Area2D_input_event"]
+
+[connection signal="input_event" from="Area2D2" to="Area2D/CollisionPolygon2D/AnimationPlayer" method="_on_Area2D2_input_event"]
+
+

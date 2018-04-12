@@ -1,0 +1,430 @@
+[gd_scene load_steps=19 format=2]
+
+[ext_resource path="res://Script/Village1tomap1.gd" type="Script" id=1]
+[ext_resource path="res://Textures/Backgrounds/Villageplace2.jpg" type="Texture" id=2]
+[ext_resource path="res://Script/Marcos.gd" type="Script" id=3]
+[ext_resource path="res://Script/marchat.gd" type="Script" id=4]
+[ext_resource path="res://Textures/Icons/moine.png" type="Texture" id=5]
+[ext_resource path="res://Textures/Font/Marcos.tres" type="DynamicFont" id=6]
+[ext_resource path="res://Sounds/Villageplace.ogg" type="AudioStream" id=7]
+[ext_resource path="res://Script/Bactovilpath.gd" type="Script" id=8]
+[ext_resource path="res://Script/vilplacetohut.gd" type="Script" id=9]
+[ext_resource path="res://Script/vil1tonorvil.gd" type="Script" id=10]
+
+
+[sub_resource type="Animation" id=1]
+
+length = 5.0
+loop = false
+step = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("../../../Marcos:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ true, false ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("../../../Area2D5:input_pickable")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ true, false ]
+}
+
+[sub_resource type="Animation" id=2]
+
+length = 15.0
+loop = false
+step = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("../../Marcos:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 15 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ false, false ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Marchat:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 15 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ true, false ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("AnimationPlayer/Marcos2:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 14.9 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ true, false ]
+}
+
+[sub_resource type="Animation" id=3]
+
+length = 5.0
+loop = false
+step = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("Background:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 0.0103418, 0.0742188, 0.00492859, 1 ), Color( 0.701376, 0.943244, 0.680879, 1 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Area2D5:input_pickable")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+
+[sub_resource type="RectangleShape2D" id=4]
+
+custom_solver_bias = 0.0
+extents = Vector2( 140, 10 )
+
+[sub_resource type="Animation" id=5]
+
+resource_name = "back"
+length = 5.0
+loop = false
+step = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("../../Background:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 0.701376, 0.943244, 0.680879, 1 ), Color( 0.00829667, 0.0664063, 0.00337219, 1 ) ]
+}
+
+[sub_resource type="Animation" id=6]
+
+resource_name = "change"
+length = 5.0
+loop = false
+step = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("../../Background:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 4.9 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 0.701376, 0.943244, 0.680879, 1 ), Color( 0.00568767, 0.046875, 0.00219727, 1 ) ]
+}
+
+[sub_resource type="RectangleShape2D" id=7]
+
+custom_solver_bias = 0.0
+extents = Vector2( 140, 10 )
+
+[sub_resource type="Animation" id=8]
+
+resource_name = "change"
+length = 5.0
+loop = false
+step = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("../../Background:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 0.701376, 0.943244, 0.680879, 1 ), Color( 0.00473973, 0.0390625, 0.00183105, 1 ) ]
+}
+
+[node name="Node2D" type="Node2D"]
+
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_horizontal_guides_": [ -240.0 ]
+}
+
+[node name="Background" type="Sprite" parent="." index="0"]
+
+position = Vector2( 958.33, 543.818 )
+scale = Vector2( 2.10412, 2.38612 )
+texture = ExtResource( 2 )
+_sections_unfolded = [ "Visibility" ]
+
+[node name="Area2D" type="Area2D" parent="Background" index="0"]
+
+position = Vector2( -456.247, -225.809 )
+scale = Vector2( 0.475258, 0.419091 )
+input_pickable = true
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+audio_bus_override = false
+audio_bus_name = "Master"
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Background/Area2D" index="0"]
+
+build_mode = 0
+polygon = PoolVector2Array( 960, 630, 960, 590, 970, 560, 980, 560, 970, 540, 980, 530, 1000, 550, 1020, 590, 1010, 610, 1000, 620, 1000, 640, 980, 650 )
+script = ExtResource( 3 )
+
+[node name="AnimationPlayer1" type="AnimationPlayer" parent="Background/Area2D/CollisionPolygon2D" index="0"]
+
+root_node = NodePath("..")
+autoplay = ""
+playback_process_mode = 1
+playback_default_blend_time = 0.0
+playback_speed = 1.0
+anims/marcos = SubResource( 1 )
+blend_times = [  ]
+
+[node name="Area2D5" type="Area2D" parent="." index="1"]
+
+position = Vector2( -0.00012207, -6.10352e-05 )
+input_pickable = false
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+audio_bus_override = false
+audio_bus_name = "Master"
+_sections_unfolded = [ "Pickable" ]
+
+[node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="Area2D5" index="0"]
+
+pause_mode = 1
+build_mode = 0
+polygon = PoolVector2Array( 770, 710, 830, 620, 900, 580, 710, 450, 940, 240, 1230, 650, 1080, 820 )
+disabled = true
+script = ExtResource( 4 )
+_sections_unfolded = [ "Material", "Pause", "Transform", "Visibility", "Z Index" ]
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Area2D5/CollisionPolygon2D2" index="0"]
+
+root_node = NodePath("..")
+autoplay = ""
+playback_process_mode = 1
+playback_default_blend_time = 0.0
+playback_speed = 1.0
+anims/marchat = SubResource( 2 )
+blend_times = [  ]
+
+[node name="Marcos2" type="Sprite" parent="Area2D5/CollisionPolygon2D2/AnimationPlayer" index="0"]
+
+visible = false
+position = Vector2( 970, 500 )
+texture = ExtResource( 5 )
+_sections_unfolded = [ "Offset", "Transform", "Visibility" ]
+
+[node name="Marchat" type="Label" parent="Area2D5/CollisionPolygon2D2" index="1"]
+
+visible = false
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 1075.0
+margin_top = 46.0
+margin_right = 1822.0
+margin_bottom = 347.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+custom_fonts/font = ExtResource( 6 )
+text = "Hello...
+
+And welcome to Onyris, Psychonaut.
+
+Where times are dire in truth.
+
+
+But before you venture forth,
+
+you should find your Ace and your Dice.
+
+Symbols of your control and
+
+acceptance. Your most precious assets.
+
+
+See Ma upthere. She'll tell you.
+
+"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+_sections_unfolded = [ "Visibility", "custom_fonts" ]
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." index="2"]
+
+root_node = NodePath("..")
+autoplay = "Intro"
+playback_process_mode = 1
+playback_default_blend_time = 0.0
+playback_speed = 1.0
+anims/Intro = SubResource( 3 )
+blend_times = [  ]
+
+[node name="Marcos" type="Sprite" parent="." index="3"]
+
+visible = false
+position = Vector2( 970, 500 )
+texture = ExtResource( 5 )
+_sections_unfolded = [ "Offset", "Transform", "Visibility" ]
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." index="4"]
+
+position = Vector2( 12, -1 )
+stream = ExtResource( 7 )
+volume_db = 0.0
+autoplay = true
+max_distance = 2000.0
+attenuation = 1.0
+bus = "Master"
+area_mask = 1
+
+[node name="Area2D2" type="Area2D" parent="." index="5"]
+
+input_pickable = true
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+audio_bus_override = false
+audio_bus_name = "Master"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D2" index="0"]
+
+position = Vector2( 1120, 1060 )
+scale = Vector2( 2.44755, 1 )
+shape = SubResource( 4 )
+script = ExtResource( 8 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Area2D2/CollisionShape2D" index="0"]
+
+root_node = NodePath("..")
+autoplay = ""
+playback_process_mode = 1
+playback_default_blend_time = 0.0
+playback_speed = 1.0
+anims/back = SubResource( 5 )
+blend_times = [  ]
+
+[node name="Area2D3" type="Area2D" parent="." index="6"]
+
+input_pickable = true
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+audio_bus_override = false
+audio_bus_name = "Master"
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Area2D3" index="0"]
+
+build_mode = 0
+polygon = PoolVector2Array( 410, 120, 490, 150, 490, 40, 400, 10 )
+script = ExtResource( 9 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Area2D3/CollisionPolygon2D" index="0"]
+
+root_node = NodePath("..")
+autoplay = ""
+playback_process_mode = 1
+playback_default_blend_time = 0.0
+playback_speed = 1.0
+anims/change = SubResource( 6 )
+blend_times = [  ]
+
+[node name="Area2D4" type="Area2D" parent="." index="7"]
+
+input_pickable = true
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+audio_bus_override = false
+audio_bus_name = "Master"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D4" index="0"]
+
+position = Vector2( 1180, 445.75 )
+scale = Vector2( 0.844405, 3.51923 )
+shape = SubResource( 7 )
+script = ExtResource( 10 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Area2D4/CollisionShape2D" index="0"]
+
+root_node = NodePath("..")
+autoplay = ""
+playback_process_mode = 1
+playback_default_blend_time = 0.0
+playback_speed = 1.0
+anims/change = SubResource( 8 )
+blend_times = [  ]
+
+[connection signal="input_event" from="Background/Area2D" to="Background/Area2D/CollisionPolygon2D" method="_on_Area2D_input_event"]
+
+[connection signal="input_event" from="Area2D5" to="Area2D5/CollisionPolygon2D2" method="_on_Area2D2_input_event"]
+
+[connection signal="input_event" from="Area2D2" to="Area2D2/CollisionShape2D" method="_on_Area2D2_input_event"]
+
+[connection signal="animation_finished" from="Area2D2/CollisionShape2D/AnimationPlayer" to="Area2D2/CollisionShape2D" method="_on_AnimationPlayer_animation_finished"]
+
+[connection signal="input_event" from="Area2D3" to="Area2D3/CollisionPolygon2D" method="_on_Area2D3_input_event"]
+
+[connection signal="animation_finished" from="Area2D3/CollisionPolygon2D/AnimationPlayer" to="Area2D3/CollisionPolygon2D" method="_on_AnimationPlayer_animation_finished"]
+
+[connection signal="input_event" from="Area2D4" to="Area2D4/CollisionShape2D" method="_on_Area2D4_input_event"]
+
+[connection signal="animation_finished" from="Area2D4/CollisionShape2D/AnimationPlayer" to="Area2D4/CollisionShape2D" method="_on_AnimationPlayer_animation_finished"]
+
+

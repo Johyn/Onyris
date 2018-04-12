@@ -1,0 +1,18 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/cavebeaat1.ogg-80a41ccbf8d0e60965cbcc39c08e9312.oggstr"
+
+[deps]
+
+source_file="res://Sounds/cavebeaat1.ogg"
+source_md5="b74772eb45cc29d933a53fcca330170d"
+
+dest_files=[ "res://.import/cavebeaat1.ogg-80a41ccbf8d0e60965cbcc39c08e9312.oggstr" ]
+dest_md5="371fb87533b00b5cc264709f30561250"
+
+[params]
+
+loop=true
+loop_offset=0

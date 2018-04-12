@@ -1,0 +1,343 @@
+[gd_scene load_steps=14 format=2]
+
+[ext_resource path="res://Script/Soul.gd" type="Script" id=1]
+[ext_resource path="res://Script/Soulpoly.gd" type="Script" id=2]
+[ext_resource path="res://Script/Mindpoly.gd" type="Script" id=3]
+[ext_resource path="res://Script/Bodypoly.gd" type="Script" id=4]
+[ext_resource path="res://Textures/Icons/7bd5d5ff60a2188eb1ec8fb8155f73b5.jpg" type="Texture" id=5]
+[ext_resource path="res://Textures/Font/Soul.tres" type="DynamicFont" id=6]
+[ext_resource path="res://Textures/Font/Body.tres" type="DynamicFont" id=7]
+[ext_resource path="res://Textures/Font/Mind.tres" type="DynamicFont" id=8]
+[ext_resource path="res://Sounds/Soul.ogg" type="AudioStream" id=9]
+
+[sub_resource type="Animation" id=1]
+
+resource_name = "change"
+length = 5.0
+loop = false
+step = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("../../Background:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 0.0507813, 0.00317383, 0.00317383, 1 ) ]
+}
+
+[sub_resource type="Animation" id=2]
+
+length = 5.0
+loop = false
+step = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("../../Background:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 0.03125, 0.00109863, 0.00109863, 1 ) ]
+}
+
+[sub_resource type="Animation" id=3]
+
+length = 5.0
+loop = false
+step = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("../../Background:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 0.0429688, 0.0025177, 0.0025177, 1 ) ]
+}
+
+[sub_resource type="Animation" id=4]
+
+length = 5.0
+loop = false
+step = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("Background:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 0.0507813, 0.00218201, 0.00218201, 1 ), Color( 1, 1, 1, 1 ) ]
+}
+
+[node name="Node2D" type="Node2D"]
+
+script = ExtResource( 1 )
+
+[node name="Area2D3" type="Area2D" parent="." index="0"]
+
+input_pickable = true
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+audio_bus_override = false
+audio_bus_name = "Master"
+
+[node name="Soulpoly" type="CollisionPolygon2D" parent="Area2D3" index="0"]
+
+build_mode = 0
+polygon = PoolVector2Array( 943.924, 527.339, 951.582, 525.639, 960.401, 526.194, 966.15, 528.773, 971.096, 532.653, 973.179, 536.889, 973.665, 544.18, 969.29, 549.874, 962.206, 554.226, 953.961, 554.584, 946.433, 552.792, 939.013, 548.694, 936.037, 542.395, 936.754, 535.943, 939.98, 531.282 )
+script = ExtResource( 2 )
+_sections_unfolded = [ "Transform", "Visibility", "Z Index" ]
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Area2D3/Soulpoly" index="0"]
+
+root_node = NodePath("..")
+autoplay = ""
+playback_process_mode = 1
+playback_default_blend_time = 0.0
+playback_speed = 1.0
+anims/change = SubResource( 1 )
+blend_times = [  ]
+_sections_unfolded = [ "Playback Options" ]
+
+[node name="Area2D2" type="Area2D" parent="." index="1"]
+
+position = Vector2( 6.10352e-05, 6.10352e-05 )
+input_pickable = true
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+audio_bus_override = false
+audio_bus_name = "Master"
+
+[node name="Mindpoly" type="CollisionPolygon2D" parent="Area2D2" index="0"]
+
+build_mode = 0
+polygon = PoolVector2Array( 1234.39, 510.851, 1243.37, 518.036, 1251.76, 531.208, 1253.55, 543.782, 1249.96, 555.757, 1238.58, 565.935, 1223.02, 572.521, 1202.06, 569.528, 1191.28, 558.75, 1185.89, 540.189, 1190.68, 525.221, 1202.06, 512.049, 1217.63, 507.857 )
+script = ExtResource( 3 )
+_sections_unfolded = [ "Transform", "Z Index" ]
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="AnimationPlayer2" type="AnimationPlayer" parent="Area2D2/Mindpoly" index="0"]
+
+root_node = NodePath("..")
+autoplay = ""
+playback_process_mode = 1
+playback_default_blend_time = 0.0
+playback_speed = 1.0
+anims/change4 = SubResource( 2 )
+blend_times = [  ]
+
+[node name="Area2D" type="Area2D" parent="." index="2"]
+
+position = Vector2( 691.711, 536.782 )
+scale = Vector2( 0.942914, -0.675216 )
+input_pickable = true
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+audio_bus_override = false
+audio_bus_name = "Master"
+_sections_unfolded = [ "Audio Bus", "Collision", "Pickable" ]
+
+[node name="Bodypoly" type="CollisionPolygon2D" parent="Area2D" index="0"]
+
+build_mode = 0
+polygon = PoolVector2Array( -32.2349, 19.7985, -37.5635, 0.42041, -35.6763, -22.2131, -27.4509, -37.8301, -12.7311, -50.7725, 7.30396, -52.8662, 24.2043, -40.1141, 32.6546, -10.6132, 30.065, 17.3651, 16.4357, 38.6819, -2.64539, 43.2499, -21.9108, 33.9056 )
+script = ExtResource( 4 )
+_sections_unfolded = [ "Material", "Transform", "Visibility", "Z Index" ]
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="AnimationPlayer1" type="AnimationPlayer" parent="Area2D/Bodypoly" index="0"]
+
+root_node = NodePath("..")
+autoplay = ""
+playback_process_mode = 1
+playback_default_blend_time = 0.0
+playback_speed = 1.0
+anims/change3 = SubResource( 3 )
+blend_times = [  ]
+
+[node name="Background" type="Sprite" parent="." index="3"]
+
+position = Vector2( 955.328, 538.545 )
+scale = Vector2( 1.68965, 1.28091 )
+texture = ExtResource( 5 )
+_sections_unfolded = [ "Visibility" ]
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Soul" type="Label" parent="Background" index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = -389.0
+margin_top = -180.0
+margin_right = 77.0
+margin_bottom = 22.0
+rect_scale = Vector2( 1.6, 1.6 )
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+custom_fonts/font = ExtResource( 6 )
+text = "Soul"
+align = 1
+valign = 1
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+_sections_unfolded = [ "Rect", "custom_fonts" ]
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="body" type="Label" parent="Background" index="1"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = -329.0
+margin_top = -56.0
+margin_right = -123.0
+margin_bottom = 117.0
+rect_scale = Vector2( 0.5, 0.5 )
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+custom_fonts/font = ExtResource( 7 )
+text = "B"
+align = 1
+valign = 1
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+_sections_unfolded = [ "Rect", "custom_fonts" ]
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Label" type="Label" parent="Background/body" index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 133.0
+margin_top = 66.0
+margin_right = 309.0
+margin_bottom = 145.0
+rect_scale = Vector2( 0.7, 0.7 )
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+custom_fonts/font = ExtResource( 7 )
+text = "ody"
+align = 1
+valign = 1
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+_sections_unfolded = [ "Anchor", "Rect", "custom_fonts" ]
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Mind" type="Label" parent="Background" index="2"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 205.0
+margin_top = -43.0
+margin_right = 412.0
+margin_bottom = 100.0
+rect_scale = Vector2( 0.4, 0.4 )
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+custom_fonts/font = ExtResource( 8 )
+text = "Mind"
+align = 1
+valign = 1
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+_sections_unfolded = [ "Rect", "Visibility", "custom_fonts" ]
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="AnimationPlayer4" type="AnimationPlayer" parent="." index="4"]
+
+root_node = NodePath("..")
+autoplay = "Open"
+playback_process_mode = 1
+playback_default_blend_time = 0.0
+playback_speed = 1.0
+anims/Open = SubResource( 4 )
+blend_times = [  ]
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." index="5"]
+
+stream = ExtResource( 9 )
+volume_db = 0.0
+autoplay = true
+max_distance = 2000.0
+attenuation = 1.0
+bus = "Master"
+area_mask = 1
+
+[connection signal="input_event" from="Area2D3" to="Area2D3/Soulpoly" method="_on_Area2D3_input_event"]
+
+[connection signal="animation_finished" from="Area2D3/Soulpoly/AnimationPlayer" to="Area2D3/Soulpoly" method="_on_AnimationPlayer_animation_finished"]
+
+[connection signal="input_event" from="Area2D2" to="Area2D2/Mindpoly" method="_on_Area2D2_input_event"]
+
+[connection signal="animation_finished" from="Area2D2/Mindpoly/AnimationPlayer2" to="Area2D2/Mindpoly" method="_on_AnimationPlayer2_animation_finished"]
+
+[connection signal="input_event" from="Area2D" to="Area2D/Bodypoly" method="_on_Area2D_input_event"]
+
+[connection signal="animation_finished" from="Area2D/Bodypoly/AnimationPlayer1" to="Area2D/Bodypoly" method="_on_AnimationPlayer1_animation_finished"]
+
+

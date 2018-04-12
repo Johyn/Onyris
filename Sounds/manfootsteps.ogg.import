@@ -1,0 +1,18 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/manfootsteps.ogg-2d763ebec25f12266ae6b863da4818a3.oggstr"
+
+[deps]
+
+source_file="res://Sounds/manfootsteps.ogg"
+source_md5="c9da6072f04ec302582166fbdaf86c21"
+
+dest_files=[ "res://.import/manfootsteps.ogg-2d763ebec25f12266ae6b863da4818a3.oggstr" ]
+dest_md5="fb957a49713f7db0ae6bbe1988b53fc1"
+
+[params]
+
+loop=true
+loop_offset=0

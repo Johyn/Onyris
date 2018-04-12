@@ -1,0 +1,18 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/cascade.ogg-2938b7e3fe0fdb035b1dcb141e0b4302.oggstr"
+
+[deps]
+
+source_file="res://Sounds/cascade.ogg"
+source_md5="c21dc67c3564d2c6e4015c4aa72905b1"
+
+dest_files=[ "res://.import/cascade.ogg-2938b7e3fe0fdb035b1dcb141e0b4302.oggstr" ]
+dest_md5="dc6d8081331fac673bec8c3cea938178"
+
+[params]
+
+loop=true
+loop_offset=0

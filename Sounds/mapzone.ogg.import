@@ -1,0 +1,18 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/mapzone.ogg-18a3c42ab1572f505d82e92ec4cbd7fc.oggstr"
+
+[deps]
+
+source_file="res://Sounds/mapzone.ogg"
+source_md5="c79b2d8ea7f0cf1af7ea43f5f4fc51d8"
+
+dest_files=[ "res://.import/mapzone.ogg-18a3c42ab1572f505d82e92ec4cbd7fc.oggstr" ]
+dest_md5="0ed4539200ea088159581925eb534dae"
+
+[params]
+
+loop=true
+loop_offset=0

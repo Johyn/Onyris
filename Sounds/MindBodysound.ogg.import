@@ -1,0 +1,18 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/MindBodysound.ogg-5485901185bf698b3bdfba07b9d4e83d.oggstr"
+
+[deps]
+
+source_file="res://Sounds/MindBodysound.ogg"
+source_md5="c2ddea7e92af59437f5471e83793d26a"
+
+dest_files=[ "res://.import/MindBodysound.ogg-5485901185bf698b3bdfba07b9d4e83d.oggstr" ]
+dest_md5="93ad84d418cb3cda6c86c433473cb1d2"
+
+[params]
+
+loop=true
+loop_offset=0

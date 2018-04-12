@@ -1,0 +1,32 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Textures/Backgrounds/biblio1.jpg" type="Texture" id=1]
+[ext_resource path="res://Script/Inlibrary.gd" type="Script" id=2]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Librarybuildin" type="Sprite" parent="." index="0"]
+
+position = Vector2( 964.539, 479.272 )
+scale = Vector2( 3.00924, 1.7608 )
+texture = ExtResource( 1 )
+
+[node name="Area2D" type="Area2D" parent="." index="1"]
+
+input_pickable = true
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+audio_bus_override = false
+audio_bus_name = "Master"
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Area2D" index="0"]
+
+build_mode = 0
+polygon = PoolVector2Array( 904.972, 914.325, 900.328, 836.042, 908.289, 826.09, 919.567, 816.802, 931.509, 812.158, 942.787, 815.476, 953.402, 821.446, 963.353, 832.061, 965.343, 844.666, 968.661, 916.979 )
+script = ExtResource( 2 )
+
+[connection signal="input_event" from="Area2D" to="Area2D/CollisionPolygon2D" method="_on_Area2D_input_event"]
+
+

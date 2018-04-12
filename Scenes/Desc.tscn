@@ -1,0 +1,13 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://Textures/Backgrounds/Desc.png" type="Texture" id=1]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Desc" type="Sprite" parent="." index="0"]
+
+position = Vector2( 952.639, 531.256 )
+scale = Vector2( 1.0001, 0.979196 )
+texture = ExtResource( 1 )
+
+

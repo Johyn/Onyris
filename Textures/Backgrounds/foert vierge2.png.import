@@ -1,0 +1,32 @@
+[remap]
+
+importer="texture"
+type="StreamTexture"
+path="res://.import/foert vierge2.png-db21d75484d14453307ae7ee1fea2f39.stex"
+
+[deps]
+
+source_file="res://Textures/Backgrounds/foert vierge2.png"
+source_md5="cae0525b23d63ddc66cf945b79093a13"
+
+dest_files=[ "res://.import/foert vierge2.png-db21d75484d14453307ae7ee1fea2f39.stex" ]
+dest_md5="cf47cdcb534de8a2c559910b98312759"
+
+[params]
+
+compress/mode=0
+compress/lossy_quality=0.7
+compress/hdr_mode=0
+compress/normal_map=0
+flags/repeat=0
+flags/filter=true
+flags/mipmaps=false
+flags/anisotropic=false
+flags/srgb=2
+process/fix_alpha_border=true
+process/premult_alpha=false
+process/HDR_as_SRGB=false
+stream=false
+size_limit=0
+detect_3d=true
+svg/scale=1.0

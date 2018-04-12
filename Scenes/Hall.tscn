@@ -1,0 +1,209 @@
+[gd_scene load_steps=11 format=2]
+
+[ext_resource path="res://Script/bust.gd" type="Script" id=1]
+[ext_resource path="res://Textures/Icons/buste.png" type="Texture" id=2]
+[ext_resource path="res://Textures/Backgrounds/hall.png" type="Texture" id=3]
+[ext_resource path="res://Sounds/Hauntedwood.ogg" type="AudioStream" id=4]
+[ext_resource path="res://Sounds/horrorambient.ogg" type="AudioStream" id=5]
+[ext_resource path="res://Script/Manroom1in.gd" type="Script" id=6]
+[ext_resource path="res://Sounds/manfootsteps.ogg" type="AudioStream" id=7]
+
+[sub_resource type="Animation" id=1]
+
+resource_name = "bust"
+length = 4.0
+loop = false
+step = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("AnimationPlayer/bust:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 4 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ true, false ]
+}
+
+[sub_resource type="Animation" id=2]
+
+resource_name = "Intro"
+length = 5.0
+loop = false
+step = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("Area2D/CollisionPolygon2D/AnimationPlayer/bust:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Background:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 0, 0, 0, 1 ), Color( 0.414063, 0.320251, 0.320251, 1 ) ]
+}
+
+[sub_resource type="Animation" id=3]
+
+resource_name = "manroomin"
+length = 8.0
+loop = false
+step = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("../../AudioStreamPlayer2D3:playing")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 2,
+"values": [ true ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("../../Background:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 8 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 0.414063, 0.320251, 0.320251, 1 ), Color( 0.0664063, 0.00596619, 0.00596619, 1 ) ]
+}
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Area2D" type="Area2D" parent="." index="0"]
+
+input_pickable = true
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+audio_bus_override = false
+audio_bus_name = "Master"
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Area2D" index="0"]
+
+build_mode = 0
+polygon = PoolVector2Array( 566.901, 563.448, 582.994, 545.892, 582.019, 532.725, 556.172, 514.193, 567.388, 497.612, 582.994, 489.81, 583.969, 463.963, 589.334, 453.234, 610.792, 456.648, 620.545, 474.204, 614.205, 485.908, 622.983, 502.001, 603.476, 523.459, 601.526, 546.867, 611.279, 564.424 )
+script = ExtResource( 1 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Area2D/CollisionPolygon2D" index="0"]
+
+root_node = NodePath("..")
+autoplay = ""
+playback_process_mode = 1
+playback_default_blend_time = 0.0
+playback_speed = 1.0
+anims/bust = SubResource( 1 )
+blend_times = [  ]
+
+[node name="bust" type="Sprite" parent="Area2D/CollisionPolygon2D/AnimationPlayer" index="0"]
+
+visible = false
+modulate = Color( 0.507813, 0.438385, 0.438385, 1 )
+position = Vector2( 599.251, 334.144 )
+scale = Vector2( 2.35072, 2.18055 )
+texture = ExtResource( 2 )
+_sections_unfolded = [ "Offset", "Visibility" ]
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." index="1"]
+
+root_node = NodePath("..")
+autoplay = "Intro"
+playback_process_mode = 1
+playback_default_blend_time = 0.0
+playback_speed = 1.0
+anims/Intro = SubResource( 2 )
+blend_times = [  ]
+
+[node name="Background" type="Sprite" parent="." index="2"]
+
+modulate = Color( 0.0664063, 0.00596619, 0.00596619, 1 )
+position = Vector2( 962.413, 546.819 )
+scale = Vector2( 1.00701, 0.925193 )
+texture = ExtResource( 3 )
+_sections_unfolded = [ "Visibility" ]
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." index="3"]
+
+stream = ExtResource( 4 )
+volume_db = 0.0
+autoplay = true
+max_distance = 2000.0
+attenuation = 2.54912
+bus = "Master"
+area_mask = 1
+
+[node name="AudioStreamPlayer2D2" type="AudioStreamPlayer2D" parent="." index="4"]
+
+stream = ExtResource( 5 )
+volume_db = 0.0
+autoplay = true
+max_distance = 2000.0
+attenuation = 2.54912
+bus = "Master"
+area_mask = 1
+
+[node name="Area2D2" type="Area2D" parent="." index="5"]
+
+input_pickable = true
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+audio_bus_override = false
+audio_bus_name = "Master"
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Area2D2" index="0"]
+
+build_mode = 0
+polygon = PoolVector2Array( 203.669, 557.041, 200.654, 225.426, 306.168, 266.124, 304.66, 642.959, 266.977, 557.041 )
+script = ExtResource( 6 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Area2D2/CollisionPolygon2D" index="0"]
+
+root_node = NodePath("..")
+autoplay = ""
+playback_process_mode = 1
+playback_default_blend_time = 0.0
+playback_speed = 1.0
+anims/manroomin = SubResource( 3 )
+blend_times = [  ]
+
+[node name="AudioStreamPlayer2D3" type="AudioStreamPlayer2D" parent="." index="6"]
+
+stream = ExtResource( 7 )
+volume_db = 0.0
+autoplay = false
+max_distance = 2000.0
+attenuation = 1.0
+bus = "Master"
+area_mask = 1
+
+[connection signal="input_event" from="Area2D" to="Area2D/CollisionPolygon2D" method="_on_Area2D_input_event"]
+
+[connection signal="input_event" from="Area2D2" to="Area2D2/CollisionPolygon2D" method="_on_Area2D2_input_event"]
+
+[connection signal="animation_finished" from="Area2D2/CollisionPolygon2D/AnimationPlayer" to="Area2D2/CollisionPolygon2D" method="_on_AnimationPlayer_animation_finished"]
+
+

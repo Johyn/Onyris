@@ -1,0 +1,18 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/manroom1.ogg-ca40f745449412b22dc18721968a7aaf.oggstr"
+
+[deps]
+
+source_file="res://Sounds/manroom1.ogg"
+source_md5="c25c559af6ae50b190d5c65c2b1ec7af"
+
+dest_files=[ "res://.import/manroom1.ogg-ca40f745449412b22dc18721968a7aaf.oggstr" ]
+dest_md5="72e137e92e9b07b9dd4ba2e980ac509a"
+
+[params]
+
+loop=true
+loop_offset=0

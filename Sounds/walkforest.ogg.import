@@ -1,0 +1,18 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/walkforest.ogg-74ec3a5c065f432847285f750b66fa93.oggstr"
+
+[deps]
+
+source_file="res://Sounds/walkforest.ogg"
+source_md5="da1a0b2c5e10ae63037e0e5db117bdb8"
+
+dest_files=[ "res://.import/walkforest.ogg-74ec3a5c065f432847285f750b66fa93.oggstr" ]
+dest_md5="ef6629e154177b17b2887ac9370234c3"
+
+[params]
+
+loop=true
+loop_offset=0

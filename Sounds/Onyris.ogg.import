@@ -1,0 +1,18 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/Onyris.ogg-f2d8785cfa1091d7d4a5cbc9c452f27d.oggstr"
+
+[deps]
+
+source_file="res://Sounds/Onyris.ogg"
+source_md5="0a706ecba0e024267461e226ccb553e9"
+
+dest_files=[ "res://.import/Onyris.ogg-f2d8785cfa1091d7d4a5cbc9c452f27d.oggstr" ]
+dest_md5="3eb2ec4ade9ca6b867121337de434b8f"
+
+[params]
+
+loop=true
+loop_offset=0

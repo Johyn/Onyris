@@ -1,0 +1,18 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/watchtower.ogg-1f903bdcaa99f99cda6bb2f99bd6dd4e.oggstr"
+
+[deps]
+
+source_file="res://Sounds/watchtower.ogg"
+source_md5="fd5cffd413ec361667250cd3ff227391"
+
+dest_files=[ "res://.import/watchtower.ogg-1f903bdcaa99f99cda6bb2f99bd6dd4e.oggstr" ]
+dest_md5="d1a5bf64061ac17e53d8c02a1a3d3c62"
+
+[params]
+
+loop=true
+loop_offset=0

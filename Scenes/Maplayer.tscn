@@ -1,0 +1,13 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://Textures/Backgrounds/old-brown-paper-texture-image.png" type="Texture" id=1]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Sprite" type="Sprite" parent="." index="0"]
+
+position = Vector2( 960.381, 541.779 )
+scale = Vector2( 1.46341, 1.00666 )
+texture = ExtResource( 1 )
+
+

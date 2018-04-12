@@ -1,0 +1,18 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/crow1.ogg-b85b2e896fd73b81ed4d6a841a8fdd23.oggstr"
+
+[deps]
+
+source_file="res://Sounds/crow1.ogg"
+source_md5="4de5cf1d249cf6befb5f1e949e6c750c"
+
+dest_files=[ "res://.import/crow1.ogg-b85b2e896fd73b81ed4d6a841a8fdd23.oggstr" ]
+dest_md5="b0a5f512fc08510341b31f5d2fb201dd"
+
+[params]
+
+loop=true
+loop_offset=0

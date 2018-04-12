@@ -1,0 +1,319 @@
+[gd_scene load_steps=10 format=2]
+
+[ext_resource path="res://Textures/Backgrounds/Fond.jpg" type="Texture" id=1]
+[ext_resource path="res://Textures/Icons/ob_487663_au-risque-de-l-art-repro-001.png" type="Texture" id=2]
+[ext_resource path="res://Textures/Icons/Timeblanc.png" type="Texture" id=3]
+[ext_resource path="res://Script/AdotoAdult.gd" type="Script" id=4]
+[ext_resource path="res://Textures/Font/Mind.tres" type="DynamicFont" id=5]
+[ext_resource path="res://Textures/Icons/Arabesque.png" type="Texture" id=6]
+[ext_resource path="res://Sounds/Ado.ogg" type="AudioStream" id=7]
+
+
+
+[sub_resource type="Animation" id=1]
+
+resource_name = "change"
+length = 5.0
+loop = false
+step = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("../../Background:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 0.859375, 0.470207, 0.157776, 1 ), Color( 0.0429688, 0.0220207, 0.00520325, 1 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("../../Ados:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 0.859375, 0.470207, 0.157776, 1 ), Color( 0.0976563, 0.0487775, 0.00953674, 1 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("../../Adolesence:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 0.0390625, 0.00183105, 0.00183105, 1 ) ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("../../Play/Arabesque:modulate")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0, 5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 0.0585938, 0.00320435, 0.00320435, 1 ) ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("../Time:modulate")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0, 5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 0.0351563, 0.00233459, 0.00233459, 1 ) ]
+}
+
+[sub_resource type="Animation" id=2]
+
+resource_name = "Intro1"
+length = 5.0
+loop = false
+step = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("Area2D/Time:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 0.0507813, 0.00257874, 0.00257874, 1 ), Color( 1, 1, 1, 1 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Background:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 0.0585938, 0.0279969, 0.00343323, 1 ), Color( 0.859375, 0.470207, 0.157776, 1 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("Ados:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 0.0859375, 0.0421793, 0.00704956, 1 ), Color( 0.859375, 0.470207, 0.157776, 1 ) ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("Adolesence:modulate")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0, 5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 0.0703125, 0.00466919, 0.00466919, 1 ), Color( 1, 1, 1, 1 ) ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("Play/Arabesque:modulate")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0, 5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 0.0585938, 0.00320435, 0.00320435, 1 ), Color( 1, 1, 1, 1 ) ]
+}
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Background" type="Sprite" parent="." index="0"]
+
+modulate = Color( 0.859375, 0.470207, 0.157776, 1 )
+position = Vector2( 971.188, 540.004 )
+scale = Vector2( 1.89682, 1.63921 )
+texture = ExtResource( 1 )
+_sections_unfolded = [ "Visibility" ]
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Ados" type="Sprite" parent="." index="1"]
+
+modulate = Color( 0.859375, 0.470207, 0.157776, 1 )
+position = Vector2( 947.416, 540.592 )
+scale = Vector2( 1.02165, 0.874139 )
+texture = ExtResource( 2 )
+_sections_unfolded = [ "Visibility" ]
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Area2D" type="Area2D" parent="." index="2"]
+
+input_pickable = true
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+audio_bus_override = false
+audio_bus_name = "Master"
+
+[node name="Time" type="Sprite" parent="Area2D" index="0"]
+
+position = Vector2( 1691, 300.073 )
+scale = Vector2( 0.234606, 0.288096 )
+texture = ExtResource( 3 )
+_sections_unfolded = [ "Visibility" ]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Area2D" index="1"]
+
+position = Vector2( -32.8088, -114.831 )
+build_mode = 0
+polygon = PoolVector2Array( 1711.94, 249.779, 1725.24, 292.992, 1726.35, 342.853, 1739.64, 350.61, 1782.85, 315.153, 1799.48, 309.612, 1809.45, 353.934, 1816.1, 381.635, 1799.48, 420.416, 1789.5, 452.549, 1770.67, 474.71, 1720.8, 599.918, 1680.92, 537.868, 1660.97, 483.574, 1654.32, 434.82, 1679.81, 318.477 )
+script = ExtResource( 4 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Area2D/CollisionPolygon2D" index="0"]
+
+root_node = NodePath("..")
+autoplay = ""
+playback_process_mode = 1
+playback_default_blend_time = 0.0
+playback_speed = 1.0
+anims/change = SubResource( 1 )
+blend_times = [  ]
+
+[node name="AnimationPlayer1" type="AnimationPlayer" parent="." index="3"]
+
+root_node = NodePath("..")
+autoplay = "Intro1"
+playback_process_mode = 1
+playback_default_blend_time = 0.0
+playback_speed = 1.0
+anims/Intro1 = SubResource( 2 )
+blend_times = [  ]
+
+[node name="Adolesence" type="Label" parent="." index="4"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 74.0
+margin_top = 702.0
+margin_right = 558.0
+margin_bottom = 856.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+custom_fonts/font = ExtResource( 5 )
+text = "Adolesence"
+align = 1
+valign = 1
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+_sections_unfolded = [ "Rect", "Visibility", "custom_fonts" ]
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Event" type="Label" parent="." index="5"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 877.0
+margin_top = 159.0
+margin_right = 1161.0
+margin_bottom = 302.0
+rect_scale = Vector2( 0.6, 0.6 )
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+custom_fonts/font = ExtResource( 5 )
+text = "Event?"
+align = 1
+valign = 1
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+_sections_unfolded = [ "Rect", "custom_fonts" ]
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Play" type="Label" parent="." index="6"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 1623.0
+margin_top = 740.0
+margin_right = 1801.0
+margin_bottom = 883.0
+rect_scale = Vector2( 0.6, 0.6 )
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+custom_fonts/font = ExtResource( 5 )
+text = "Play"
+align = 1
+valign = 1
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+_sections_unfolded = [ "Rect", "custom_fonts" ]
+
+[node name="Arabesque" type="Sprite" parent="Play" index="0"]
+
+position = Vector2( -2184.67, 171.996 )
+scale = Vector2( 2.01732, 1.40305 )
+texture = ExtResource( 6 )
+_sections_unfolded = [ "Visibility" ]
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." index="7"]
+
+stream = ExtResource( 7 )
+volume_db = 0.0
+autoplay = true
+max_distance = 2000.0
+attenuation = 1.0
+bus = "Master"
+area_mask = 1
+
+[connection signal="input_event" from="Area2D" to="Area2D/CollisionPolygon2D" method="_on_Area2D_input_event"]
+
+[connection signal="animation_finished" from="Area2D/CollisionPolygon2D/AnimationPlayer" to="Area2D/CollisionPolygon2D" method="_on_AnimationPlayer_animation_finished"]
+
+

@@ -1,0 +1,18 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/sanct.ogg-12e3021685c23f62464ecb08ea42d7ef.oggstr"
+
+[deps]
+
+source_file="res://Sounds/sanct.ogg"
+source_md5="05794456ada318495ef2a8f7da5d18c5"
+
+dest_files=[ "res://.import/sanct.ogg-12e3021685c23f62464ecb08ea42d7ef.oggstr" ]
+dest_md5="aab794cd1b84079c76fbfbe0b20ecc5f"
+
+[params]
+
+loop=true
+loop_offset=0

@@ -1,0 +1,18 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/basshut2.ogg-f4929edf4f3d6ddcf8b8ce91e15e1713.oggstr"
+
+[deps]
+
+source_file="res://Sounds/basshut2.ogg"
+source_md5="cb848d3fe85c1cb74ae0dd7a1a965f76"
+
+dest_files=[ "res://.import/basshut2.ogg-f4929edf4f3d6ddcf8b8ce91e15e1713.oggstr" ]
+dest_md5="22d1046a69cab6fc6e5e8819083e77bb"
+
+[params]
+
+loop=true
+loop_offset=0
