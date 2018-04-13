@@ -1,12 +1,13 @@
 [gd_scene load_steps=12 format=2]
 
-[ext_resource path="res://Script/OutVillage.gd" type="Script" id=1]
+[ext_resource path="res://Scripts/OutVillage.gd" type="Script" id=1]
 [ext_resource path="res://Textures/Backgrounds/village1.jpg" type="Texture" id=2]
 [ext_resource path="res://Textures/Fleurs/fleurviolette.png" type="Texture" id=3]
-[ext_resource path="res://Script/Village.gd" type="Script" id=4]
+[ext_resource path="res://Scripts/Village.gd" type="Script" id=4]
 [ext_resource path="res://Sounds/Village.ogg" type="AudioStream" id=5]
-[ext_resource path="res://Script/Fleurvillage.gd" type="Script" id=6]
+[ext_resource path="res://Scripts/Fleurvillage.gd" type="Script" id=6]
 [ext_resource path="res://Textures/Font/Soul.tres" type="DynamicFont" id=7]
+
 
 
 [sub_resource type="Animation" id=1]

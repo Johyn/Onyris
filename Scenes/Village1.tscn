@@ -1,15 +1,16 @@
 [gd_scene load_steps=19 format=2]
 
-[ext_resource path="res://Script/Village1tomap1.gd" type="Script" id=1]
+[ext_resource path="res://Scripts/Village1tomap1.gd" type="Script" id=1]
 [ext_resource path="res://Textures/Backgrounds/Villageplace2.jpg" type="Texture" id=2]
-[ext_resource path="res://Script/Marcos.gd" type="Script" id=3]
-[ext_resource path="res://Script/marchat.gd" type="Script" id=4]
+[ext_resource path="res://Scripts/Marcos.gd" type="Script" id=3]
+[ext_resource path="res://Scripts/marchat.gd" type="Script" id=4]
 [ext_resource path="res://Textures/Icons/moine.png" type="Texture" id=5]
 [ext_resource path="res://Textures/Font/Marcos.tres" type="DynamicFont" id=6]
 [ext_resource path="res://Sounds/Villageplace.ogg" type="AudioStream" id=7]
-[ext_resource path="res://Script/Bactovilpath.gd" type="Script" id=8]
-[ext_resource path="res://Script/vilplacetohut.gd" type="Script" id=9]
-[ext_resource path="res://Script/vil1tonorvil.gd" type="Script" id=10]
+[ext_resource path="res://Scripts/Bactovilpath.gd" type="Script" id=8]
+[ext_resource path="res://Scripts/vilplacetohut.gd" type="Script" id=9]
+[ext_resource path="res://Scripts/vil1tonorvil.gd" type="Script" id=10]
+
 
 
 [sub_resource type="Animation" id=1]

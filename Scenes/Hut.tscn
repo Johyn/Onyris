@@ -1,10 +1,11 @@
 [gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://Textures/Backgrounds/hut1.png" type="Texture" id=1]
-[ext_resource path="res://Script/Ma.gd" type="Script" id=2]
+[ext_resource path="res://Scripts/Ma.gd" type="Script" id=2]
 [ext_resource path="res://Textures/Font/Ma.tres" type="DynamicFont" id=3]
-[ext_resource path="res://Script/Huttovilplace.gd" type="Script" id=4]
+[ext_resource path="res://Scripts/Huttovilplace.gd" type="Script" id=4]
 [ext_resource path="res://Sounds/Ma.wav" type="AudioStream" id=5]
+
 
 
 [sub_resource type="Animation" id=1]

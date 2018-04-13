@@ -7,8 +7,9 @@
 [ext_resource path="res://Textures/Font/Mind.tres" type="DynamicFont" id=5]
 [ext_resource path="res://Textures/Font/Soul.tres" type="DynamicFont" id=6]
 [ext_resource path="res://Sounds/MindBodysound.ogg" type="AudioStream" id=7]
-[ext_resource path="res://Script/BodytoMind.gd" type="Script" id=8]
-[ext_resource path="res://Script/BodytoSoul.gd" type="Script" id=9]
+[ext_resource path="res://Scripts/BodytoMind.gd" type="Script" id=8]
+[ext_resource path="res://Scripts/BodytoSoul.gd" type="Script" id=9]
+
 
 [sub_resource type="Animation" id=1]
 

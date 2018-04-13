@@ -1,6 +1,6 @@
 [gd_scene load_steps=14 format=2]
 
-[ext_resource path="res://Script/Library2.gd" type="Script" id=1]
+[ext_resource path="res://Scripts/Library2.gd" type="Script" id=1]
 [ext_resource path="res://Textures/Backgrounds/Library.jpg" type="Texture" id=2]
 [ext_resource path="res://Textures/Icons/lib.png" type="Texture" id=3]
 [ext_resource path="res://Sounds/Smokin.ogg" type="AudioStream" id=4]
@@ -9,6 +9,7 @@
 [ext_resource path="res://Textures/Font/lib.tres" type="DynamicFont" id=7]
 [ext_resource path="res://Textures/Font/Mind.tres" type="DynamicFont" id=8]
 [ext_resource path="res://Sounds/burp.ogg" type="AudioStream" id=9]
+
 
 [sub_resource type="Animation" id=1]
 

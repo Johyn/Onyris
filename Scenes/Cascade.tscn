@@ -2,9 +2,10 @@
 
 [ext_resource path="res://Textures/Backgrounds/cascadenymphe.png" type="Texture" id=1]
 [ext_resource path="res://Textures/Icons/nymphe2.png" type="Texture" id=2]
-[ext_resource path="res://Script/nymphe.gd" type="Script" id=3]
+[ext_resource path="res://Scripts/nymphe.gd" type="Script" id=3]
 [ext_resource path="res://Sounds/cascade2.ogg" type="AudioStream" id=4]
 [ext_resource path="res://Sounds/cascade.ogg" type="AudioStream" id=5]
+
 
 [sub_resource type="Animation" id=1]
 

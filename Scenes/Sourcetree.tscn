@@ -1,17 +1,147 @@
-[gd_scene load_steps=2 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://Textures/Backgrounds/sourcetree.jpg" type="Texture" id=1]
+[ext_resource path="res://Textures/Icons/775x515-CROW.png" type="Texture" id=2]
+[ext_resource path="res://Textures/Icons/raven2.png" type="Texture" id=3]
+[ext_resource path="res://Textures/Icons/crow.png" type="Texture" id=4]
+[ext_resource path="res://Sounds/sourcetree.ogg" type="AudioStream" id=5]
+[ext_resource path="res://Scripts/Crow.gd" type="Script" id=6]
+[ext_resource path="res://Sounds/crow.ogg" type="AudioStream" id=7]
 
+[sub_resource type="Animation" id=1]
 
-[node name="Node2D" type="Node2D" index="0"]
+resource_name = "crow"
+length = 14.0
+loop = false
+step = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("../../Background/crow:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 2 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("../../Background/crow2:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 2, 7 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ true, false ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("../../Background/crow3:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 7, 14 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ true, false ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("../../AudioStreamPlayer2D2:playing")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+
+[node name="Node2D" type="Node2D"]
 
 [node name="Background" type="Sprite" parent="." index="0"]
 
-position = Vector2( 962.688, 541.18 )
-scale = Vector2( 3.0136, 3.00501 )
+modulate = Color( 0.844827, 0.914063, 0.792664, 1 )
+position = Vector2( 960.657, 537.816 )
+scale = Vector2( 3.00835, 3.01561 )
 texture = ExtResource( 1 )
-__meta__ = {
-"_edit_lock_": true
-}
+_sections_unfolded = [ "Visibility" ]
+
+[node name="crow" type="Sprite" parent="Background" index="0"]
+
+position = Vector2( -108.061, -172.596 )
+scale = Vector2( 0.0147453, 0.0119412 )
+texture = ExtResource( 2 )
+_sections_unfolded = [ "Visibility" ]
+
+[node name="crow2" type="Sprite" parent="Background" index="1"]
+
+visible = false
+position = Vector2( -190.441, -141.699 )
+scale = Vector2( 0.160501, 0.191411 )
+texture = ExtResource( 3 )
+_sections_unfolded = [ "Visibility" ]
+
+[node name="crow3" type="Sprite" parent="Background" index="2"]
+
+visible = false
+position = Vector2( 147.813, -75.4645 )
+scale = Vector2( 0.51204, 0.386843 )
+texture = ExtResource( 4 )
+_sections_unfolded = [ "Visibility" ]
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." index="1"]
+
+stream = ExtResource( 5 )
+volume_db = 0.0
+autoplay = true
+max_distance = 2000.0
+attenuation = 1.0
+bus = "Master"
+area_mask = 1
+
+[node name="Area2D" type="Area2D" parent="." index="2"]
+
+input_pickable = true
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+audio_bus_override = false
+audio_bus_name = "Master"
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Area2D" index="0"]
+
+build_mode = 0
+polygon = PoolVector2Array( 635.392, 27.0841, 618.221, 13.9911, 630.24, 4.76164, 654.709, 23.006, 641.616, 31.3769 )
+script = ExtResource( 6 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Area2D/CollisionPolygon2D" index="0"]
+
+root_node = NodePath("..")
+autoplay = ""
+playback_process_mode = 1
+playback_default_blend_time = 0.0
+playback_speed = 1.0
+anims/crow = SubResource( 1 )
+blend_times = [  ]
+
+[node name="AudioStreamPlayer2D2" type="AudioStreamPlayer2D" parent="." index="3"]
+
+stream = ExtResource( 7 )
+volume_db = 0.0
+autoplay = false
+max_distance = 2000.0
+attenuation = 1.0
+bus = "Master"
+area_mask = 1
+
+[connection signal="input_event" from="Area2D" to="Area2D/CollisionPolygon2D" method="_on_Area2D_input_event"]
 
 

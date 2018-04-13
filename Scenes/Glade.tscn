@@ -4,8 +4,9 @@
 [ext_resource path="res://Textures/Icons/chaplutin1.png" type="Texture" id=2]
 [ext_resource path="res://Textures/Icons/lutin1.png" type="Texture" id=3]
 [ext_resource path="res://Textures/Fleurs/bluebell.png" type="Texture" id=4]
-[ext_resource path="res://Script/Lutin1gd.gd" type="Script" id=5]
+[ext_resource path="res://Scripts/Lutin1gd.gd" type="Script" id=5]
 [ext_resource path="res://Sounds/forest.ogg" type="AudioStream" id=6]
+
 
 [sub_resource type="Animation" id=1]
 

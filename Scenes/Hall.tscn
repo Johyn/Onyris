@@ -1,12 +1,13 @@
 [gd_scene load_steps=11 format=2]
 
-[ext_resource path="res://Script/bust.gd" type="Script" id=1]
+[ext_resource path="res://Scripts/bust.gd" type="Script" id=1]
 [ext_resource path="res://Textures/Icons/buste.png" type="Texture" id=2]
 [ext_resource path="res://Textures/Backgrounds/hall.png" type="Texture" id=3]
 [ext_resource path="res://Sounds/Hauntedwood.ogg" type="AudioStream" id=4]
 [ext_resource path="res://Sounds/horrorambient.ogg" type="AudioStream" id=5]
-[ext_resource path="res://Script/Manroom1in.gd" type="Script" id=6]
+[ext_resource path="res://Scripts/Manroom1in.gd" type="Script" id=6]
 [ext_resource path="res://Sounds/manfootsteps.ogg" type="AudioStream" id=7]
+
 
 [sub_resource type="Animation" id=1]
 

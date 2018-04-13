@@ -4,9 +4,10 @@
 [ext_resource path="res://Textures/Font/Mind.tres" type="DynamicFont" id=2]
 [ext_resource path="res://Textures/Font/Soul.tres" type="DynamicFont" id=3]
 [ext_resource path="res://Textures/Icons/Timeblanc.png" type="Texture" id=4]
-[ext_resource path="res://Script/BirthtoYouth.gd" type="Script" id=5]
+[ext_resource path="res://Scripts/BirthtoYouth.gd" type="Script" id=5]
 [ext_resource path="res://Textures/Icons/Arabesque.png" type="Texture" id=6]
 [ext_resource path="res://Sounds/Baby.ogg" type="AudioStream" id=7]
+
 
 
 

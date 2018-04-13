@@ -1,12 +1,13 @@
 [gd_scene load_steps=11 format=2]
 
-[ext_resource path="res://Script/Cabanscript.gd" type="Script" id=1]
+[ext_resource path="res://Scripts/Cabanscript.gd" type="Script" id=1]
 [ext_resource path="res://Textures/Backgrounds/woodmanhut.jpg" type="Texture" id=2]
 [ext_resource path="res://Textures/Icons/woodman2.png" type="Texture" id=3]
 [ext_resource path="res://Textures/Icons/paintingwoodman2.png" type="Texture" id=4]
 [ext_resource path="res://Sounds/junglesound.ogg" type="AudioStream" id=5]
 [ext_resource path="res://Textures/Font/Woodman2.tres" type="DynamicFont" id=6]
 [ext_resource path="res://Textures/Font/Mind.tres" type="DynamicFont" id=7]
+
 
 [sub_resource type="Animation" id=1]
 

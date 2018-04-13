@@ -5,9 +5,10 @@
 [ext_resource path="res://Textures/Fleurs/branch.png" type="Texture" id=3]
 [ext_resource path="res://Textures/Fleurs/plant.png" type="Texture" id=4]
 [ext_resource path="res://Sounds/jungle.ogg" type="AudioStream" id=5]
-[ext_resource path="res://Script/quit.gd" type="Script" id=6]
+[ext_resource path="res://Scripts/quit.gd" type="Script" id=6]
 [ext_resource path="res://Textures/Font/Soul.tres" type="DynamicFont" id=7]
-[ext_resource path="res://Script/quitanim.gd" type="Script" id=8]
+[ext_resource path="res://Scripts/quitanim.gd" type="Script" id=8]
+
 
 
 [sub_resource type="Animation" id=1]
