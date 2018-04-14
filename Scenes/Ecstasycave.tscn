@@ -310,7 +310,7 @@ tracks/22/keys = {
 "values": [ false, true ]
 }
 
-[node name="Node2D" type="Node2D" index="0"]
+[node name="Node2D" type="Node2D"]
 
 [node name="loveroom" type="Sprite" parent="." index="0"]
 
