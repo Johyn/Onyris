@@ -1,0 +1,18 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/manmoan.ogg-4e476bc87b352ca143e72064d0830585.oggstr"
+
+[deps]
+
+source_file="res://Sounds/manmoan.ogg"
+source_md5="7f58d240bdedcfe5836e69056ca18c99"
+
+dest_files=[ "res://.import/manmoan.ogg-4e476bc87b352ca143e72064d0830585.oggstr" ]
+dest_md5="fe021cd8b053dbbbeb393761ff3be5be"
+
+[params]
+
+loop=true
+loop_offset=0

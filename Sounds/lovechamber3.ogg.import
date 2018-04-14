@@ -1,0 +1,18 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/lovechamber3.ogg-14996a0fd5ae028dd681902c271327dc.oggstr"
+
+[deps]
+
+source_file="res://Sounds/lovechamber3.ogg"
+source_md5="544eed1cb30deb2b557ebb0428ab7d2d"
+
+dest_files=[ "res://.import/lovechamber3.ogg-14996a0fd5ae028dd681902c271327dc.oggstr" ]
+dest_md5="61ab8156eeaa547a287c3e5da96e70cf"
+
+[params]
+
+loop=true
+loop_offset=0
