@@ -1,0 +1,244 @@
+[gd_scene load_steps=17 format=2]
+
+[ext_resource path="res://Textures/Maps/mapzone1a.png" type="Texture" id=1]
+[ext_resource path="res://Scripts/Player2.gd" type="Script" id=2]
+[ext_resource path="res://Textures/Backgrounds/junglemap.png" type="Texture" id=3]
+[ext_resource path="res://Textures/Icons/player.png" type="Texture" id=4]
+[ext_resource path="res://Textures/Backgrounds/old-brown-paper-texture-image.png" type="Texture" id=5]
+[ext_resource path="res://Scripts/Pathvilllage.gd" type="Script" id=6]
+[ext_resource path="res://Scripts/maptovillage.gd" type="Script" id=7]
+[ext_resource path="res://Scripts/Maptovillage1.gd" type="Script" id=8]
+[ext_resource path="res://Scripts/Maptocaban.gd" type="Script" id=9]
+[ext_resource path="res://Scripts/Maptohauntedhouse.gd" type="Script" id=10]
+
+[sub_resource type="CircleShape2D" id=1]
+
+custom_solver_bias = 0.0
+radius = 27.9017
+
+[sub_resource type="CircleShape2D" id=2]
+
+custom_solver_bias = 0.0
+radius = 9.74982
+
+[sub_resource type="CircleShape2D" id=3]
+
+custom_solver_bias = 0.0
+radius = 43.3225
+
+[sub_resource type="CircleShape2D" id=4]
+
+custom_solver_bias = 0.0
+radius = 15.6495
+
+[sub_resource type="CircleShape2D" id=5]
+
+custom_solver_bias = 0.0
+radius = 19.7961
+
+[sub_resource type="CircleShape2D" id=6]
+
+custom_solver_bias = 0.0
+radius = 10.0
+
+[node name="Node2D" type="Node2D" index="0"]
+
+[node name="Map" type="Sprite" parent="." index="0"]
+
+position = Vector2( 964.862, 730.848 )
+texture = ExtResource( 1 )
+
+[node name="Node2D" type="Node2D" parent="." index="1"]
+
+[node name="Player" type="KinematicBody2D" parent="." index="2"]
+
+position = Vector2( 1462.69, 540.48 )
+scale = Vector2( 1, 1.10785 )
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+collision/safe_margin = 0.08
+script = ExtResource( 2 )
+_sections_unfolded = [ "Collision", "Transform", "collision" ]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Player" index="0"]
+
+position = Vector2( 2.3147, -0.00704956 )
+scale = Vector2( 0.7016, 0.548106 )
+shape = SubResource( 1 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Tween" type="Tween" parent="Player" index="1"]
+
+repeat = false
+playback_process_mode = 1
+playback_speed = 1.0
+playback/active = false
+playback/repeat = false
+playback/speed = 1.0
+
+[node name="Camera2D" type="Camera2D" parent="Player" index="2"]
+
+position = Vector2( -409.442, 16.8913 )
+scale = Vector2( 1, 1.10265 )
+anchor_mode = 1
+rotating = false
+current = true
+zoom = Vector2( 1, 1 )
+limit_left = -10000000
+limit_top = -10000000
+limit_right = 10000000
+limit_bottom = 10000000
+limit_smoothed = false
+drag_margin_h_enabled = false
+drag_margin_v_enabled = false
+smoothing_enabled = false
+smoothing_speed = 5.0
+offset_v = 0.0
+offset_h = 0.0
+drag_margin_left = 0.2
+drag_margin_top = 0.2
+drag_margin_right = 0.2
+drag_margin_bottom = 0.2
+editor_draw_screen = true
+editor_draw_limits = false
+editor_draw_drag_margin = false
+_sections_unfolded = [ "Drag Margin", "Editor", "Limit", "Offset", "Smoothing", "Transform" ]
+
+[node name="Sprite2" type="Sprite" parent="Player/Camera2D" index="0"]
+
+position = Vector2( -986.985, -454.956 )
+scale = Vector2( 1.01695, 0.843186 )
+texture = ExtResource( 3 )
+centered = false
+_sections_unfolded = [ "Offset" ]
+
+[node name="Sprite" type="Sprite" parent="Player" index="3"]
+
+position = Vector2( 3.07312, 2.83551 )
+scale = Vector2( 0.0557356, 0.0397719 )
+texture = ExtResource( 4 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="TextureButton" type="TextureButton" parent="Player" index="4"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = -1284.0
+margin_top = -433.0
+margin_right = 35.0
+margin_bottom = 653.0
+rect_scale = Vector2( 0.7, 0.7 )
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+focus_mode = 2
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+group = null
+texture_normal = ExtResource( 5 )
+_sections_unfolded = [ "Rect", "Textures" ]
+
+[node name="Pathvilllage" type="Area2D" parent="." index="3"]
+
+position = Vector2( 1013.34, 424.878 )
+input_pickable = true
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+audio_bus_override = false
+audio_bus_name = "Master"
+script = ExtResource( 6 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Pathvilllage" index="0"]
+
+position = Vector2( -174.926, 66.8031 )
+scale = Vector2( 1.79391, 2.30217 )
+shape = SubResource( 2 )
+
+[node name="Village" type="Area2D" parent="." index="4"]
+
+input_pickable = true
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+audio_bus_override = false
+audio_bus_name = "Master"
+script = ExtResource( 7 )
+new_scene_player_start_pos = null
+new_scene_path = null
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Village" index="0"]
+
+position = Vector2( 652.174, 598.246 )
+scale = Vector2( 0.44143, 0.40069 )
+shape = SubResource( 3 )
+
+[node name="Village1" type="Area2D" parent="." index="5"]
+
+input_pickable = true
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+audio_bus_override = false
+audio_bus_name = "Master"
+script = ExtResource( 8 )
+new_scene_player_start_pos = null
+new_scene_path = null
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Village1" index="0"]
+
+position = Vector2( 1032.32, 125.373 )
+scale = Vector2( 1.33449, 1.35835 )
+shape = SubResource( 4 )
+
+[node name="Caban" type="Area2D" parent="." index="6"]
+
+input_pickable = true
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+audio_bus_override = false
+audio_bus_name = "Master"
+script = ExtResource( 9 )
+new_scene_player_start_pos = null
+new_scene_path = null
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Caban" index="0"]
+
+position = Vector2( 1653.49, 1022.51 )
+scale = Vector2( 1.65907, 1.79043 )
+shape = SubResource( 5 )
+
+[node name="Hauntedhouse" type="Area2D" parent="." index="7"]
+
+input_pickable = true
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+audio_bus_override = false
+audio_bus_name = "Master"
+script = ExtResource( 10 )
+new_scene_player_start_pos = null
+new_scene_path = null
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Hauntedhouse" index="0"]
+
+position = Vector2( 344.494, 579.561 )
+scale = Vector2( 3.16357, 3.05857 )
+shape = SubResource( 6 )
+
+

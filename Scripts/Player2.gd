@@ -2,14 +2,13 @@ extends KinematicBody2D
 
 var left_mouse_down = false
 var tween_node = null
+onready var global = get_node("/root/Global")
 
 func _ready():
-	var singleton = get_node("/root/Global")
-	if singleton.player_map_position != null:
-		global_position = singleton.player_map_position
-		singleton.player_map_position = null
-	tween_node = get_node("Tween")
-	
+    tween_node = get_node("Tween") 
+				if (global.player_map_position != null):
+        self.global_position = global.player_map_position
+				
 func _physics_process(delta):
 	if Input.is_mouse_button_pressed(1):
 		if left_mouse_down == false:

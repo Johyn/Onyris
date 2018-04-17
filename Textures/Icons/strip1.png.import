@@ -7,10 +7,10 @@ path="res://.import/strip1.png-d3a38fb6c2d2d52fdb7fece6bba2536c.stex"
 [deps]
 
 source_file="res://Textures/Icons/strip1.png"
-source_md5="2284aeff7471eab17ebde9eeabd950f8"
+source_md5="93bd6af32ecef2637fd2bb7e97f5ff3b"
 
 dest_files=[ "res://.import/strip1.png-d3a38fb6c2d2d52fdb7fece6bba2536c.stex" ]
-dest_md5="02dd15b59f35f93dd9ec79f529da86ff"
+dest_md5="346f8db2cc597b9e2e9ccb2d3ba0d774"
 
 [params]
 

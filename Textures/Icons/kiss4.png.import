@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/caress1.png-7eee5467089cf9f829bcda678be8cf23.stex"
+path="res://.import/kiss4.png-e327b3741621ab086107b3d8d35597d4.stex"
 
 [deps]
 
-source_file="res://Textures/Icons/caress1.png"
-source_md5="68a80b05312c258cc2d4be85b03c2ba3"
+source_file="res://Textures/Icons/kiss4.png"
+source_md5="396442599de1133760b52f6608882841"
 
-dest_files=[ "res://.import/caress1.png-7eee5467089cf9f829bcda678be8cf23.stex" ]
-dest_md5="3a83e3fc84afae7077f0510341f62465"
+dest_files=[ "res://.import/kiss4.png-e327b3741621ab086107b3d8d35597d4.stex" ]
+dest_md5="6a3841a58a70d05f07cf870d36c2c79c"
 
 [params]
 

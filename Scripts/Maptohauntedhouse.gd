@@ -7,4 +7,4 @@ func _ready():
 	connect("body_entered", self, "body_entered")
 
 func body_entered(body):
-	get_tree().change_scene("res://Scenes/Village.tscn")
+	get_tree().change_scene("res://Scenes/Haunted-house.tscn")

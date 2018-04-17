@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/caress1.png-7eee5467089cf9f829bcda678be8cf23.stex"
+path="res://.import/dick.png-30abe306013fd8bc5a14f9a6bd8aa162.stex"
 
 [deps]
 
-source_file="res://Textures/Icons/caress1.png"
-source_md5="68a80b05312c258cc2d4be85b03c2ba3"
+source_file="res://Textures/Icons/dick.png"
+source_md5="2caa66c4c255639170b4cfb4e0ad4bb8"
 
-dest_files=[ "res://.import/caress1.png-7eee5467089cf9f829bcda678be8cf23.stex" ]
-dest_md5="3a83e3fc84afae7077f0510341f62465"
+dest_files=[ "res://.import/dick.png-30abe306013fd8bc5a14f9a6bd8aa162.stex" ]
+dest_md5="10c85ba7342e08950c52a128c4e0d8c4"
 
 [params]
 

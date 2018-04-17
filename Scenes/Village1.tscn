@@ -11,8 +11,6 @@
 [ext_resource path="res://Scripts/vilplacetohut.gd" type="Script" id=9]
 [ext_resource path="res://Scripts/vil1tonorvil.gd" type="Script" id=10]
 
-
-
 [sub_resource type="Animation" id=1]
 
 length = 5.0

@@ -1,4 +1,4 @@
-[gd_scene load_steps=28 format=2]
+[gd_scene load_steps=34 format=2]
 
 [ext_resource path="res://Textures/Backgrounds/cabedance.png" type="Texture" id=1]
 [ext_resource path="res://Textures/Icons/high-priestess.png" type="Texture" id=2]
@@ -11,26 +11,32 @@
 [ext_resource path="res://Textures/Icons/strip3.png" type="Texture" id=9]
 [ext_resource path="res://Textures/Icons/kiss.png" type="Texture" id=10]
 [ext_resource path="res://Textures/Icons/caress.png" type="Texture" id=11]
-[ext_resource path="res://Textures/Icons/caress1.png" type="Texture" id=12]
-[ext_resource path="res://Textures/Icons/suck.png" type="Texture" id=13]
-[ext_resource path="res://Textures/Icons/kiss2.png" type="Texture" id=14]
-[ext_resource path="res://Textures/Icons/suck2.png" type="Texture" id=15]
-[ext_resource path="res://Sounds/loveroom70.ogg" type="AudioStream" id=16]
-[ext_resource path="res://Sounds/loveroom80.ogg" type="AudioStream" id=17]
-[ext_resource path="res://Sounds/loveroom.ogg" type="AudioStream" id=18]
-[ext_resource path="res://Sounds/breathing.ogg" type="AudioStream" id=19]
-[ext_resource path="res://Sounds/breathing1.ogg" type="AudioStream" id=20]
-[ext_resource path="res://Sounds/breathing2.ogg" type="AudioStream" id=21]
-[ext_resource path="res://Sounds/lovechamber3.ogg" type="AudioStream" id=22]
-[ext_resource path="res://Sounds/manmoan.ogg" type="AudioStream" id=23]
-[ext_resource path="res://Sounds/lovechamber2.ogg" type="AudioStream" id=24]
-[ext_resource path="res://Sounds/kiss.ogg" type="AudioStream" id=25]
-[ext_resource path="res://Sounds/womoan.ogg" type="AudioStream" id=26]
+[ext_resource path="res://Textures/Icons/kiss3.png" type="Texture" id=12]
+[ext_resource path="res://Textures/Icons/caress1.png" type="Texture" id=13]
+[ext_resource path="res://Textures/Icons/suck.png" type="Texture" id=14]
+[ext_resource path="res://Textures/Icons/kiss2.png" type="Texture" id=15]
+[ext_resource path="res://Textures/Icons/suck2.png" type="Texture" id=16]
+[ext_resource path="res://Textures/Icons/kiss4.png" type="Texture" id=17]
+[ext_resource path="res://Textures/Icons/fuck.png" type="Texture" id=18]
+[ext_resource path="res://Textures/Icons/pussy.png" type="Texture" id=19]
+[ext_resource path="res://Textures/Icons/dick.png" type="Texture" id=20]
+[ext_resource path="res://Textures/Icons/fuck3.png" type="Texture" id=21]
+[ext_resource path="res://Sounds/loveroom70.ogg" type="AudioStream" id=22]
+[ext_resource path="res://Sounds/loveroom80.ogg" type="AudioStream" id=23]
+[ext_resource path="res://Sounds/loveroom.ogg" type="AudioStream" id=24]
+[ext_resource path="res://Sounds/breathing.ogg" type="AudioStream" id=25]
+[ext_resource path="res://Sounds/breathing1.ogg" type="AudioStream" id=26]
+[ext_resource path="res://Sounds/breathing2.ogg" type="AudioStream" id=27]
+[ext_resource path="res://Sounds/lovechamber2.ogg" type="AudioStream" id=28]
+[ext_resource path="res://Sounds/manmoan.ogg" type="AudioStream" id=29]
+[ext_resource path="res://Sounds/lovechamber+.ogg" type="AudioStream" id=30]
+[ext_resource path="res://Sounds/kiss.ogg" type="AudioStream" id=31]
+[ext_resource path="res://Sounds/womoan.ogg" type="AudioStream" id=32]
 
 [sub_resource type="Animation" id=1]
 
 resource_name = "Intro"
-length = 70.0
+length = 80.0
 loop = false
 step = 0.1
 tracks/0/type = "value"
@@ -196,7 +202,7 @@ tracks/13/loop_wrap = true
 tracks/13/imported = false
 tracks/13/enabled = true
 tracks/13/keys = {
-"times": PoolRealArray( 0, 36.7, 39.1 ),
+"times": PoolRealArray( 0, 36.1, 38.7 ),
 "transitions": PoolRealArray( 1, 1, 1 ),
 "update": 1,
 "values": [ false, true, false ]
@@ -220,7 +226,7 @@ tracks/15/loop_wrap = true
 tracks/15/imported = false
 tracks/15/enabled = true
 tracks/15/keys = {
-"times": PoolRealArray( 0, 41.3, 51.7 ),
+"times": PoolRealArray( 0, 41.3, 51.5 ),
 "transitions": PoolRealArray( 1, 1, 1 ),
 "update": 1,
 "values": [ false, true, false ]
@@ -244,7 +250,7 @@ tracks/17/loop_wrap = true
 tracks/17/imported = false
 tracks/17/enabled = true
 tracks/17/keys = {
-"times": PoolRealArray( 0, 41.3, 56.4 ),
+"times": PoolRealArray( 0, 41.3, 56.3 ),
 "transitions": PoolRealArray( 1, 1, 1 ),
 "update": 1,
 "values": [ false, true, false ]
@@ -268,10 +274,10 @@ tracks/19/loop_wrap = true
 tracks/19/imported = false
 tracks/19/enabled = true
 tracks/19/keys = {
-"times": PoolRealArray( 51.7, 56.4 ),
-"transitions": PoolRealArray( 1, 1 ),
+"times": PoolRealArray( 0, 51.5, 56.3 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
 "update": 1,
-"values": [ true, false ]
+"values": [ false, true, false ]
 }
 tracks/20/type = "value"
 tracks/20/path = NodePath("loveroom/suck2:visible")
@@ -280,10 +286,10 @@ tracks/20/loop_wrap = true
 tracks/20/imported = false
 tracks/20/enabled = true
 tracks/20/keys = {
-"times": PoolRealArray( 0, 56.5 ),
-"transitions": PoolRealArray( 1, 1 ),
+"times": PoolRealArray( 0, 56.3, 62.2 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
 "update": 1,
-"values": [ false, true ]
+"values": [ false, true, false ]
 }
 tracks/21/type = "value"
 tracks/21/path = NodePath("AudioStreamPlayer7:playing")
@@ -292,7 +298,7 @@ tracks/21/loop_wrap = true
 tracks/21/imported = false
 tracks/21/enabled = true
 tracks/21/keys = {
-"times": PoolRealArray( 0, 56.5 ),
+"times": PoolRealArray( 0, 56.3 ),
 "transitions": PoolRealArray( 1, 1 ),
 "update": 1,
 "values": [ false, true ]
@@ -304,7 +310,91 @@ tracks/22/loop_wrap = true
 tracks/22/imported = false
 tracks/22/enabled = true
 tracks/22/keys = {
-"times": PoolRealArray( 0, 56.5 ),
+"times": PoolRealArray( 0, 56.3 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ false, true ]
+}
+tracks/23/type = "value"
+tracks/23/path = NodePath("loveroom/caress:visible")
+tracks/23/interp = 1
+tracks/23/loop_wrap = true
+tracks/23/imported = false
+tracks/23/enabled = true
+tracks/23/keys = {
+"times": PoolRealArray( 0, 63.6, 65 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 1,
+"values": [ false, true, false ]
+}
+tracks/24/type = "value"
+tracks/24/path = NodePath("loveroom/kiss4:visible")
+tracks/24/interp = 1
+tracks/24/loop_wrap = true
+tracks/24/imported = false
+tracks/24/enabled = true
+tracks/24/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/25/type = "value"
+tracks/25/path = NodePath("loveroom/fuck:visible")
+tracks/25/interp = 1
+tracks/25/loop_wrap = true
+tracks/25/imported = false
+tracks/25/enabled = true
+tracks/25/keys = {
+"times": PoolRealArray( 0, 65, 66.4 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 1,
+"values": [ false, true, false ]
+}
+tracks/26/type = "value"
+tracks/26/path = NodePath("loveroom/kiss3:visible")
+tracks/26/interp = 1
+tracks/26/loop_wrap = true
+tracks/26/imported = false
+tracks/26/enabled = true
+tracks/26/keys = {
+"times": PoolRealArray( 0, 62.2, 65 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 1,
+"values": [ false, true, false ]
+}
+tracks/27/type = "value"
+tracks/27/path = NodePath("loveroom/Pussy:visible")
+tracks/27/interp = 1
+tracks/27/loop_wrap = true
+tracks/27/imported = false
+tracks/27/enabled = true
+tracks/27/keys = {
+"times": PoolRealArray( 0, 63.2, 64.2 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 1,
+"values": [ false, true, false ]
+}
+tracks/28/type = "value"
+tracks/28/path = NodePath("loveroom/dick:visible")
+tracks/28/interp = 1
+tracks/28/loop_wrap = true
+tracks/28/imported = false
+tracks/28/enabled = true
+tracks/28/keys = {
+"times": PoolRealArray( 0, 53.7, 55.4 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 1,
+"values": [ false, true, false ]
+}
+tracks/29/type = "value"
+tracks/29/path = NodePath("loveroom/fuck1:visible")
+tracks/29/interp = 1
+tracks/29/loop_wrap = true
+tracks/29/imported = false
+tracks/29/enabled = true
+tracks/29/keys = {
+"times": PoolRealArray( 0, 66.5 ),
 "transitions": PoolRealArray( 1, 1 ),
 "update": 1,
 "values": [ false, true ]
@@ -324,20 +414,21 @@ _sections_unfolded = [ "Visibility" ]
 
 visible = false
 modulate = Color( 0.6875, 0.286871, 0.147705, 1 )
-position = Vector2( -242.921, 79.269 )
-scale = Vector2( 0.350709, 0.335582 )
+position = Vector2( -248.244, 67.4081 )
+scale = Vector2( 0.329416, 0.369278 )
 texture = ExtResource( 2 )
 _sections_unfolded = [ "Visibility" ]
 
 [node name="highpriest" type="Sprite" parent="loveroom/high-priestess" index="0"]
 
-position = Vector2( 346.541, 8.5578 )
-scale = Vector2( 1.12091, 1.32878 )
+position = Vector2( 346.541, 18.6854 )
+scale = Vector2( 1.12091, 1.29361 )
 texture = ExtResource( 3 )
 _sections_unfolded = [ "Visibility" ]
 
 [node name="buckle" type="Sprite" parent="loveroom/high-priestess/highpriest" index="0"]
 
+visible = false
 position = Vector2( -1.32086, -10.3057 )
 scale = Vector2( 0.315811, 0.235316 )
 texture = ExtResource( 4 )
@@ -345,6 +436,7 @@ _sections_unfolded = [ "Transform", "Visibility" ]
 
 [node name="congas" type="Sprite" parent="loveroom/high-priestess/highpriest" index="1"]
 
+visible = false
 position = Vector2( 114.516, 137.886 )
 scale = Vector2( 1, 1.19758 )
 texture = ExtResource( 5 )
@@ -370,6 +462,7 @@ _sections_unfolded = [ "Visibility" ]
 
 [node name="strip2" type="Sprite" parent="loveroom" index="3"]
 
+visible = false
 modulate = Color( 0.660156, 0.373252, 0.296555, 1 )
 position = Vector2( 106.023, 44.1553 )
 scale = Vector2( 0.354558, 0.318735 )
@@ -388,6 +481,7 @@ _sections_unfolded = [ "Transform", "Visibility" ]
 
 [node name="strip3" type="Sprite" parent="loveroom" index="5"]
 
+visible = false
 modulate = Color( 0.894531, 0.599976, 0.440277, 1 )
 position = Vector2( 1.94223, 26.4654 )
 scale = Vector2( 0.100063, 0.11818 )
@@ -406,39 +500,94 @@ _sections_unfolded = [ "Visibility" ]
 [node name="caress" type="Sprite" parent="loveroom" index="7"]
 
 visible = false
-position = Vector2( 77.7623, 60.5195 )
+position = Vector2( 80.4109, -96.3511 )
 scale = Vector2( 0.721782, 0.742991 )
 texture = ExtResource( 11 )
+_sections_unfolded = [ "Visibility" ]
 
-[node name="caress1" type="Sprite" parent="loveroom" index="8"]
+[node name="kiss3" type="Sprite" parent="loveroom" index="8"]
 
-modulate = Color( 0.800781, 0.500586, 0.33783, 1 )
-position = Vector2( 132.776, -4.91267 )
-scale = Vector2( 0.566524, 0.60527 )
+visible = false
+modulate = Color( 0.867188, 0.534265, 0.240509, 1 )
+position = Vector2( 58.1388, 137.136 )
 texture = ExtResource( 12 )
 _sections_unfolded = [ "Visibility" ]
 
-[node name="suck" type="Sprite" parent="loveroom" index="9"]
+[node name="caress1" type="Sprite" parent="loveroom" index="9"]
 
 visible = false
-modulate = Color( 0.902344, 0.488871, 0.0881195, 1 )
+modulate = Color( 0.800781, 0.500586, 0.33783, 1 )
+position = Vector2( 132.776, -4.91267 )
+scale = Vector2( 0.566524, 0.60527 )
 texture = ExtResource( 13 )
 _sections_unfolded = [ "Visibility" ]
 
-[node name="Kiss2" type="Sprite" parent="loveroom" index="10"]
+[node name="suck" type="Sprite" parent="loveroom" index="10"]
+
+visible = false
+modulate = Color( 0.902344, 0.488871, 0.0881195, 1 )
+texture = ExtResource( 14 )
+_sections_unfolded = [ "Visibility" ]
+
+[node name="Kiss2" type="Sprite" parent="loveroom" index="11"]
 
 visible = false
 modulate = Color( 0.960938, 0.573988, 0.198944, 1 )
 position = Vector2( 76.6027, 38.2089 )
 scale = Vector2( 1.3114, 1.40907 )
-texture = ExtResource( 14 )
+texture = ExtResource( 15 )
 _sections_unfolded = [ "Visibility" ]
 
-[node name="suck2" type="Sprite" parent="loveroom" index="11"]
+[node name="suck2" type="Sprite" parent="loveroom" index="12"]
 
 visible = false
 modulate = Color( 0.953125, 0.573132, 0.424438, 1 )
-texture = ExtResource( 15 )
+texture = ExtResource( 16 )
+_sections_unfolded = [ "Visibility" ]
+
+[node name="kiss4" type="Sprite" parent="loveroom" index="13"]
+
+visible = false
+modulate = Color( 0.929688, 0.628719, 0.363159, 1 )
+position = Vector2( -189.384, 11.6998 )
+scale = Vector2( 1.26573, 1.4761 )
+texture = ExtResource( 17 )
+_sections_unfolded = [ "Visibility" ]
+
+[node name="fuck" type="Sprite" parent="loveroom" index="14"]
+
+visible = false
+modulate = Color( 0.808594, 0.569924, 0.315857, 1 )
+position = Vector2( 98.092, 51.8012 )
+scale = Vector2( 1.57667, 1.50309 )
+texture = ExtResource( 18 )
+_sections_unfolded = [ "Visibility" ]
+
+[node name="Pussy" type="Sprite" parent="loveroom" index="15"]
+
+visible = false
+modulate = Color( 0.882813, 0.620135, 0.210358, 1 )
+position = Vector2( -186.367, 33.0707 )
+scale = Vector2( 0.735146, 0.7771 )
+texture = ExtResource( 19 )
+_sections_unfolded = [ "Visibility" ]
+
+[node name="dick" type="Sprite" parent="loveroom" index="16"]
+
+visible = false
+modulate = Color( 0.808594, 0.565063, 0.369553, 1 )
+position = Vector2( -136.854, -3.8578 )
+scale = Vector2( 0.909804, 1.57842 )
+texture = ExtResource( 20 )
+_sections_unfolded = [ "Visibility" ]
+
+[node name="fuck1" type="Sprite" parent="loveroom" index="17"]
+
+visible = false
+modulate = Color( 0.914063, 0.587273, 0.324921, 1 )
+position = Vector2( -0.429443, -2.0538 )
+scale = Vector2( 0.333961, 0.400156 )
+texture = ExtResource( 21 )
 _sections_unfolded = [ "Visibility" ]
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." index="1"]
@@ -453,7 +602,7 @@ blend_times = [  ]
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." index="2"]
 
-stream = ExtResource( 16 )
+stream = ExtResource( 22 )
 volume_db = 0.0
 autoplay = false
 mix_target = 0
@@ -461,7 +610,7 @@ bus = "Master"
 
 [node name="AudioStreamPlayer2" type="AudioStreamPlayer" parent="." index="3"]
 
-stream = ExtResource( 17 )
+stream = ExtResource( 23 )
 volume_db = 0.0
 autoplay = false
 mix_target = 0
@@ -469,7 +618,7 @@ bus = "Master"
 
 [node name="AudioStreamPlayer3" type="AudioStreamPlayer" parent="." index="4"]
 
-stream = ExtResource( 18 )
+stream = ExtResource( 24 )
 volume_db = 0.0
 autoplay = false
 mix_target = 0
@@ -477,7 +626,7 @@ bus = "Master"
 
 [node name="AudioStreamPlayer4" type="AudioStreamPlayer" parent="." index="5"]
 
-stream = ExtResource( 19 )
+stream = ExtResource( 25 )
 volume_db = -10.0
 autoplay = false
 mix_target = 0
@@ -485,7 +634,7 @@ bus = "Master"
 
 [node name="AudioStreamPlayer5" type="AudioStreamPlayer" parent="." index="6"]
 
-stream = ExtResource( 20 )
+stream = ExtResource( 26 )
 volume_db = -10.0
 autoplay = false
 mix_target = 0
@@ -493,7 +642,7 @@ bus = "Master"
 
 [node name="AudioStreamPlayer6" type="AudioStreamPlayer" parent="." index="7"]
 
-stream = ExtResource( 21 )
+stream = ExtResource( 27 )
 volume_db = -17.0
 autoplay = false
 mix_target = 0
@@ -501,7 +650,7 @@ bus = "Master"
 
 [node name="AudioStreamPlayer7" type="AudioStreamPlayer" parent="." index="8"]
 
-stream = ExtResource( 22 )
+stream = ExtResource( 28 )
 volume_db = 0.0
 autoplay = false
 mix_target = 0
@@ -509,7 +658,7 @@ bus = "Master"
 
 [node name="AudioStreamPlayer8" type="AudioStreamPlayer" parent="." index="9"]
 
-stream = ExtResource( 23 )
+stream = ExtResource( 29 )
 volume_db = -15.0
 autoplay = false
 mix_target = 0
@@ -517,7 +666,7 @@ bus = "Master"
 
 [node name="AudioStreamPlayer9" type="AudioStreamPlayer" parent="." index="10"]
 
-stream = ExtResource( 24 )
+stream = ExtResource( 30 )
 volume_db = 0.0
 autoplay = false
 mix_target = 0
@@ -525,7 +674,7 @@ bus = "Master"
 
 [node name="AudioStreamPlayer10" type="AudioStreamPlayer" parent="." index="11"]
 
-stream = ExtResource( 25 )
+stream = ExtResource( 31 )
 volume_db = -10.0
 autoplay = false
 mix_target = 0
@@ -533,7 +682,7 @@ bus = "Master"
 
 [node name="AudioStreamPlayer11" type="AudioStreamPlayer" parent="." index="12"]
 
-stream = ExtResource( 26 )
+stream = ExtResource( 32 )
 volume_db = 0.0
 autoplay = false
 mix_target = 0

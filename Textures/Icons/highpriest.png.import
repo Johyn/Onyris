@@ -7,10 +7,10 @@ path="res://.import/highpriest.png-7ac87b42e9e3fddbdf5a9600a0e25ec5.stex"
 [deps]
 
 source_file="res://Textures/Icons/highpriest.png"
-source_md5="ba20c073b7f569a234ac077412945836"
+source_md5="0827a9487bcf822ba61631caa7399f85"
 
 dest_files=[ "res://.import/highpriest.png-7ac87b42e9e3fddbdf5a9600a0e25ec5.stex" ]
-dest_md5="c7a88f4ebc538d67d841236f8bdea29e"
+dest_md5="cf871adabb070550774fc9807b807f84"
 
 [params]
 

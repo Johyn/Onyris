@@ -7,10 +7,10 @@ path="res://.import/lovechamber2.ogg-9314cd57c1ce61c61cd55ebc2933b195.oggstr"
 [deps]
 
 source_file="res://Sounds/lovechamber2.ogg"
-source_md5="80dda1b3ea8b7558eabc7a544867f5ed"
+source_md5="fd5b554e3ea076c15f19701d1346ed33"
 
 dest_files=[ "res://.import/lovechamber2.ogg-9314cd57c1ce61c61cd55ebc2933b195.oggstr" ]
-dest_md5="ad3ae6a274306a4366b80e945813fbbb"
+dest_md5="1f600bc276036a8e1386fb8ae5ebb3bf"
 
 [params]
 

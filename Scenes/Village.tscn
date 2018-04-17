@@ -8,8 +8,6 @@
 [ext_resource path="res://Scripts/Fleurvillage.gd" type="Script" id=6]
 [ext_resource path="res://Textures/Font/Soul.tres" type="DynamicFont" id=7]
 
-
-
 [sub_resource type="Animation" id=1]
 
 resource_name = "change"

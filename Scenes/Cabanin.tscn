@@ -8,7 +8,6 @@
 [ext_resource path="res://Textures/Font/Woodman2.tres" type="DynamicFont" id=6]
 [ext_resource path="res://Textures/Font/Mind.tres" type="DynamicFont" id=7]
 
-
 [sub_resource type="Animation" id=1]
 
 resource_name = "Intro"

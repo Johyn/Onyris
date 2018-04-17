@@ -5,4 +5,5 @@ func ready():
 func _input(event):
 	if event is InputEventMouseButton:
         if event.get_button_index() == BUTTON_RIGHT and event.is_pressed():
-            get_tree().change_scene("res://Scenes/Map1.tscn")
+            get_node("/root/Global").player_map_position = Vector2(675,572)
+								get_tree().change_scene("res://Scenes/Map.tscn")
