@@ -1,14 +1,12 @@
-[gd_scene load_steps=15 format=2]
+[gd_scene load_steps=10 format=2]
 
-[ext_resource path="res://Scripts/Pathvillage.gd" type="Script" id=1]
+[ext_resource path="res://Scripts/Pathvillageout.gd" type="Script" id=1]
 [ext_resource path="res://Textures/Backgrounds/Pathvillage1.png" type="Texture" id=2]
 [ext_resource path="res://Textures/Portaits/nymphe4.png" type="Texture" id=3]
 [ext_resource path="res://Textures/Fleurs/fleur1.png" type="Texture" id=4]
 [ext_resource path="res://Scripts/chatnympheD.gd" type="Script" id=5]
 [ext_resource path="res://Textures/Font/Soul.tres" type="DynamicFont" id=6]
 [ext_resource path="res://Sounds/Village1.ogg" type="AudioStream" id=7]
-[ext_resource path="res://Scripts/Pathtovillage.gd" type="Script" id=8]
-[ext_resource path="res://Scripts/Pathtoplace.gd" type="Script" id=9]
 
 [sub_resource type="Animation" id=1]
 
@@ -39,6 +37,18 @@ tracks/1/keys = {
 "transitions": PoolRealArray( 1, 1 ),
 "update": 0,
 "values": [ Color( 0.00389099, 0.0585938, 0.0329519, 1 ), Color( 0.560547, 0.875, 0.7276, 1 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("Area2D/CollisionPolygon2D/Nymphe:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
 }
 
 [sub_resource type="Animation" id=2]
@@ -82,61 +92,6 @@ tracks/2/keys = {
 "transitions": PoolRealArray( 1, 1 ),
 "update": 1,
 "values": [ true, false ]
-}
-
-[sub_resource type="RectangleShape2D" id=3]
-
-custom_solver_bias = 0.0
-extents = Vector2( 3.25484, 10 )
-
-[sub_resource type="Animation" id=4]
-
-resource_name = "back"
-length = 5.0
-loop = false
-step = 0.1
-tracks/0/type = "value"
-tracks/0/path = NodePath("../../Background:modulate")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/keys = {
-"times": PoolRealArray( 0, 5 ),
-"transitions": PoolRealArray( 1, 1 ),
-"update": 0,
-"values": [ Color( 1, 1, 1, 1 ), Color( 0.00579834, 0.0742188, 0.0309213, 1 ) ]
-}
-tracks/1/type = "value"
-tracks/1/path = NodePath("../../Background/nymphe:modulate")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/keys = {
-"times": PoolRealArray( 0, 5 ),
-"transitions": PoolRealArray( 1, 1 ),
-"update": 0,
-"values": [ Color( 0.714214, 0.832031, 0.572021, 1 ), Color( 0.00672913, 0.0820313, 0.0467334, 1 ) ]
-}
-
-[sub_resource type="Animation" id=5]
-
-resource_name = "change"
-length = 5.0
-loop = false
-step = 0.1
-tracks/0/type = "value"
-tracks/0/path = NodePath("../../Background:modulate")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/keys = {
-"times": PoolRealArray( 0, 5 ),
-"transitions": PoolRealArray( 1, 1 ),
-"update": 0,
-"values": [ Color( 1, 1, 1, 1 ), Color( 0.00491333, 0.0546875, 0.0231897, 1 ) ]
 }
 
 [node name="Node2D" type="Node2D"]
@@ -191,6 +146,7 @@ linear_damp = 0.1
 angular_damp = 1.0
 audio_bus_override = false
 audio_bus_name = "Master"
+_sections_unfolded = [ "Pickable" ]
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Area2D" index="0"]
 
@@ -214,7 +170,6 @@ blend_times = [  ]
 [node name="Nymphe" type="Label" parent="Area2D/CollisionPolygon2D" index="1"]
 
 visible = false
-modulate = Color( 0.0208955, 0.0703125, 0.00302124, 1 )
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
@@ -246,74 +201,6 @@ attenuation = 1.0
 bus = "Master"
 area_mask = 1
 
-[node name="Area2D2" type="Area2D" parent="." index="4"]
-
-input_pickable = true
-gravity_vec = Vector2( 0, 1 )
-gravity = 98.0
-linear_damp = 0.1
-angular_damp = 1.0
-audio_bus_override = false
-audio_bus_name = "Master"
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D2" index="0"]
-
-position = Vector2( 535, 1050 )
-scale = Vector2( 98.3238, 2.30769 )
-shape = SubResource( 3 )
-script = ExtResource( 8 )
-_sections_unfolded = [ "Visibility" ]
-__meta__ = {
-"_edit_lock_": true
-}
-
-[node name="AnimationPlayer2" type="AnimationPlayer" parent="Area2D2/CollisionShape2D" index="0"]
-
-root_node = NodePath("..")
-autoplay = ""
-playback_process_mode = 1
-playback_default_blend_time = 0.0
-playback_speed = 1.0
-anims/back = SubResource( 4 )
-blend_times = [  ]
-
-[node name="Area2D3" type="Area2D" parent="." index="5"]
-
-input_pickable = true
-gravity_vec = Vector2( 0, 1 )
-gravity = 98.0
-linear_damp = 0.1
-angular_damp = 1.0
-audio_bus_override = false
-audio_bus_name = "Master"
-
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Area2D3" index="0"]
-
-build_mode = 0
-polygon = PoolVector2Array( 270, 1000, 580, 690, 540, 760, 500, 880, 510, 1020, 250, 1020 )
-script = ExtResource( 9 )
-__meta__ = {
-"_edit_lock_": true
-}
-
-[node name="AnimationPlayer2" type="AnimationPlayer" parent="Area2D3/CollisionPolygon2D" index="0"]
-
-root_node = NodePath("..")
-autoplay = ""
-playback_process_mode = 1
-playback_default_blend_time = 0.0
-playback_speed = 1.0
-anims/change = SubResource( 5 )
-blend_times = [  ]
-
 [connection signal="input_event" from="Area2D" to="Area2D/CollisionPolygon2D" method="_on_Area2D_input_event"]
-
-[connection signal="input_event" from="Area2D2" to="Area2D2/CollisionShape2D" method="_on_Area2D2_input_event"]
-
-[connection signal="animation_finished" from="Area2D2/CollisionShape2D/AnimationPlayer2" to="Area2D2/CollisionShape2D" method="_on_AnimationPlayer_animation_finished"]
-
-[connection signal="input_event" from="Area2D3" to="Area2D3/CollisionPolygon2D" method="_on_Area2D3_input_event"]
-
-[connection signal="animation_finished" from="Area2D3/CollisionPolygon2D/AnimationPlayer2" to="Area2D3/CollisionPolygon2D" method="_on_AnimationPlayer2_animation_finished"]
 
 

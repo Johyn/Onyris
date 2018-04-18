@@ -7,10 +7,10 @@ path="res://.import/mapzone1a.png-adb23ae62e72afc186bb4c0e922aa737.stex"
 [deps]
 
 source_file="res://Textures/Maps/mapzone1a.png"
-source_md5="e18e648c08c57ee454a04c9d2d81d74e"
+source_md5="244b48c27b0e20a8852470a62cc8f3cb"
 
 dest_files=[ "res://.import/mapzone1a.png-adb23ae62e72afc186bb4c0e922aa737.stex" ]
-dest_md5="cae20590c0d951684537757a3b755ab2"
+dest_md5="8a19deceab710f388d75a49e29fc486e"
 
 [params]
 
